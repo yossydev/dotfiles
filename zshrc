@@ -1,0 +1,121 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
+
+# zsh-autosuggestions
+# source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# general
+alias la='ls -la'
+alias vzr='nvim ~/.zshrc'
+alias szr='source ~/.zshrc'
+
+# タブ名の変更
+alias tn='tab-name'
+
+tab-name() {
+  echo -ne "\e]1;$1\a"
+}
+
+# for peco 
+function peco-history-selection() {
+  BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
+  CURSOR=$#BUFFER
+  zle reset-prompt
+}
+
+function peco-git-branch () {
+    local branch=$(git branch --sort=-authordate | peco --prompt "GIT BRANCH>" | tr -d ' ' | tr -d '*')
+    if [ -n "$branch" ]; then
+      if [ -n "$LBUFFER" ]; then
+        local new_left="${LBUFFER%\ } $branch"
+      else
+        local new_left="$branch"
+      fi
+      BUFFER=$(echo ${new_left}${RBUFFER} | tr '\n' ' ')
+      CURSOR=${#new_left}
+    fi
+}
+zle -N peco-git-branch
+zle -N peco-history-selection
+
+bindkey '^g' peco-git-branch
+bindkey '^R' peco-history-selection
+
+# docker
+alias dc='docker-compose'
+alias dce='docker-compose exec'
+alias dmu='make docker-up'
+alias dmd='make docker-down'
+alias dml='make docker-log'
+
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+alias pn="pnpm"
+alias pni="pnpm install"
+alias pnd="pnpm dev"
+alias pnb="pnpm build"
+alias pns="pnpm start"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
+# yarn
+alias y='yarn'
+alias yd='yarn dev'
+alias yb='yarn build'
+alias ys='yarn start'
+
+# zoxide
+eval "$(zoxide init zsh)"
+
+# gitmoji
+alias moji="gitmoji -c"
+
+# bun
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# StarShip
+eval "$(starship init zsh)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
+
+# python
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="$HOME/.rd/bin:$PATH"
+
+## neovim
+alias v='nvim'
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export XDG_CONFIG_HOME="$HOME/Desktop/dotfiles"
+
+# android
+export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
+
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# java
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export JAVA_HOME="/path/to/java17"
+
+# jEnv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"

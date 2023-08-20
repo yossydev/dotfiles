@@ -1,0 +1,97 @@
+[user]
+  name = yossydev
+  email = codeyy021@gmail.com
+
+[color]
+  ui = auto
+
+[pager]
+  diff = delta
+  log = delta
+  reflog = delta
+  show = delta
+
+[interactive]
+  diffFilter = delta --color-only --features=interactive
+
+[delta]
+  side-by-side = true
+  features = unobtrusive-line-numbers decorations
+  whitespace-error-style = 22 reverse
+
+[delta "unobtrusive-line-numbers"]
+  line-numbers = true
+  line-numbers-left-format = "{nm:>4}┊"
+  line-numbers-right-format = "{np:>4}│"
+  line-numbers-left-style = blue
+  line-numbers-right-style = blue
+
+[delta "decorations"]
+  commit-decoration-style =  box ul
+  file-style = bold yellow ul
+  file-decoration-style = none
+  hunk-header-decoration-style = cyan box ul
+
+[init]
+  defaultBranch = main
+
+[push]
+  default = simple
+
+[core]
+  editor = nvim
+  attributesfile = ~/.gitattributes
+  excludesfile = ~/.gitignore_global
+  precomposeUnicode = true
+  ignorecase = false
+
+[merge]
+  tool = nvimdiff
+
+[pull]
+  ff = only
+
+[fetch]
+  prune = true
+
+[diff]
+  tool = nvimdiff
+  algorithm = histogram
+  colorMoved = dimmed-zebra
+
+[difftool "nvimdiff"]
+  cmd = "nvim -R -d -c \"wincmd l\" -d \"$LOCAL\" \"$REMOTE\""
+
+[mergetool "nvimdiff"]
+  cmd = "nvim -d -c \"4wincmd w | wincmd J\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"  \"$MERGED\""
+
+[alias]
+  b = branch
+  co = checkout
+  cob = checkout -b
+  rb = rebase
+  rbi = rebase -i
+  rbim = rebase --rebase-merge -i
+  s = status
+  ss = status -s
+  df = diff
+  cm = commit
+  cmm = commit -m
+  pl = pull
+  plo = pull origin
+  pu = push
+  puo = push origin
+  l = log
+  lo = log --oneline
+
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+
+[ghq]
+  root = ~/develop
+
+[github]
+  user = yossydev

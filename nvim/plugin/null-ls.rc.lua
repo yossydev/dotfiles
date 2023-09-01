@@ -12,10 +12,28 @@ local lsp_formatting = function(bufnr)
   })
 end
 
+local file_exists = function(file)
+  local f = io.open(file, "r")
+  if f ~= nil then io.close(f) return true else return false end
+end
+
 null_ls.setup {
   sources = {
     null_ls.builtins.formatting.prettierd,
     null_ls.builtins.diagnostics.eslint_d.with({
+     extra_args = function(params)
+          local file_types = {"js", "tsx", "ts", "cjs", "yaml", "yml", "json"}
+          for _, file_type in pairs(file_types) do
+            if file_exists(params.root .. '/.eslintrc.' .. file_type) then
+              return {}
+            end
+          end
+
+          return {
+            "--config",
+            vim.fn.expand('.eslintrc.js')
+          }
+        end,
       diagnostics_format = '[eslint] #{m}\n(#{c})'
     }),
     null_ls.builtins.diagnostics.fish

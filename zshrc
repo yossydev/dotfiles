@@ -9,13 +9,6 @@ alias la='ls -la'
 alias vzr='nvim ~/.zshrc'
 alias szr='source ~/.zshrc'
 
-# タブ名の変更
-alias tn='tab-name'
-
-tab-name() {
-  echo -ne "\e]1;$1\a"
-}
-
 # for peco 
 function peco-history-selection() {
   BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
@@ -53,6 +46,8 @@ export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 alias pn="pnpm"
 alias pni="pnpm install"
+alias pna="pnpm add"
+alias pnad="pnpm add -D"
 alias pnd="pnpm dev"
 alias pnb="pnpm build"
 alias pns="pnpm start"
@@ -63,15 +58,25 @@ esac
 
 # yarn
 alias y='yarn'
+alias yi='yarn install'
+alias ya='yarn add'
+alias yad='yarn add -D'
 alias yd='yarn dev'
 alias yb='yarn build'
 alias ys='yarn start'
+
+# npm
+alias ni="npm install"
+alias nr="npm run"
+alias nrd="npm run dev"
+alias nrb="npm run build"
+alias nrs="npm run start"
 
 # zoxide
 eval "$(zoxide init zsh)"
 
 # gitmoji
-alias moji="gitmoji -c"
+alias gmoji="gitmoji -c"
 
 # bun
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
@@ -116,6 +121,9 @@ export JAVA_HOME="/path/to/java17"
 # jEnv
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+
+# Flutter
+export PATH="$PATH:`pwd`/flutter/bin"
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"

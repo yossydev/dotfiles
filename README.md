@@ -18,7 +18,7 @@ Follow these steps to install the dotfiles:
 1. First, clone this repository:
 
    ```bash
-   git clone https://github.com/yossydev/dotfiles.github
+   git clone https://github.com/yossydev/dotfiles.git
 
    cd dotfiles
    ```

@@ -4,4 +4,4 @@
 github-copilot/hosts.json
 tool_state
 .DS_Store
-
+/configstore

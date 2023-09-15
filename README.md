@@ -25,9 +25,9 @@ Follow these steps to install the dotfiles:
 
 2. Run the setup.sh script:
 
-```
-./scripts/setup.sh
-```
+   ```
+   ./scripts/setup.sh
+   ```
 
 This script installs Homebrew, installs packages from the Brewfile, and copies the dotfiles to your home directory.
 

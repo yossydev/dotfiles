@@ -109,6 +109,16 @@ _G.packer_plugins = {
     path = "/Users/s20106/.local/share/nvim/site/pack/packer/start/diffview.nvim",
     url = "https://github.com/sindrets/diffview.nvim"
   },
+  ["dressing.nvim"] = {
+    loaded = true,
+    path = "/Users/s20106/.local/share/nvim/site/pack/packer/start/dressing.nvim",
+    url = "https://github.com/stevearc/dressing.nvim"
+  },
+  ["flutter-tools.nvim"] = {
+    loaded = true,
+    path = "/Users/s20106/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim",
+    url = "https://github.com/akinsho/flutter-tools.nvim"
+  },
   ["git.nvim"] = {
     loaded = true,
     path = "/Users/s20106/.local/share/nvim/site/pack/packer/start/git.nvim",

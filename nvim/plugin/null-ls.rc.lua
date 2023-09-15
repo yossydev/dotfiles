@@ -22,18 +22,18 @@ null_ls.setup {
     null_ls.builtins.formatting.prettierd,
     null_ls.builtins.diagnostics.eslint_d.with({
      extra_args = function(params)
-          local file_types = {"js", "tsx", "ts", "cjs", "yaml", "yml", "json"}
-          for _, file_type in pairs(file_types) do
-            if file_exists(params.root .. '/.eslintrc.' .. file_type) then
-              return {}
+        local file_types = {"js", "tsx", "ts", "cjs", "yaml", "yml", "json"}
+        for _, file_type in pairs(file_types) do
+           local config_path = params.root .. '/.eslintrc.' .. file_type
+            if file_exists(config_path) then
+              return {
+                "--config",
+                config_path
+              }
             end
-          end
-
-          return {
-            "--config",
-            vim.fn.expand('.eslintrc.js')
-          }
-        end,
+        end
+        return {}
+      end,
       diagnostics_format = '[eslint] #{m}\n(#{c})'
     }),
     null_ls.builtins.diagnostics.fish

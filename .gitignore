@@ -7,3 +7,4 @@ tool_state
 /configstore
 /shopify
 /gh
+nvim/plugin/packer_compiled.lua

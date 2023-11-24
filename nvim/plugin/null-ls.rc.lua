@@ -20,11 +20,11 @@ end
 null_ls.setup {
   sources = {
     null_ls.builtins.formatting.prettierd,
-    null_ls.builtins.diagnostics.eslint_d.with({
+    null_ls.builtins.diagnostics.eslint.with({
      extra_args = function(params)
-        local file_types = {"js", "tsx", "ts", "cjs", "yaml", "yml", "json"}
+        local file_types = {"eslint.config.js", "eslint.config.mjs", ".eslintrc.js", ".eslintrc.cjs", ".eslintrc.yaml", ".eslintrc.yml", ".eslintrc.json", ".eslintrc"}
         for _, file_type in pairs(file_types) do
-           local config_path = params.root .. '/.eslintrc.' .. file_type
+           local config_path = params.root .. '/' .. file_type
             if file_exists(config_path) then
               return {
                 "--config",

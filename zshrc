@@ -109,6 +109,7 @@ export XDG_CONFIG_HOME="$HOME/Desktop/dotfiles"
 
 # android
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
+export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -124,6 +125,19 @@ eval "$(jenv init -)"
 
 # Flutter
 export PATH="$PATH:`pwd`/flutter/bin"
+
+# Flutter Version Management
+export PATH="$PATH:$HOME/.pub-cache/bin"
+
+# gh
+eval "$(gh completion -s zsh)"
+
+# go
+export PATH="$HOME/go/bin:$PATH"
+
+# volta
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"

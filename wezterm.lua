@@ -1,11 +1,5 @@
 local wezterm = require 'wezterm'
 
-wezterm.on("gui-startup", function(cmd)
-local _, _, window = wezterm.mux.spawn_window {}
-  local w = window:gui_window()
-  w:maximize()
-end)
-
 wezterm.on('window-config-reloaded', function(window)
   window:toast_notification('wezterm', 'Configuration reloaded!', nil, 4000)
 end)
@@ -30,7 +24,7 @@ config.font = wezterm.font('CaskaydiaCove Nerd Font Mono', {
   stretch = 'Normal',
   style = 'Normal',
 })
-config.font_size = 17.0
+config.font_size = 14.0
 
 -- port from: https://github.com/wadackel/vim-dogrun/blob/main/colors/dogrun.vim
 config.colors = {

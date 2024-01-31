@@ -8,3 +8,4 @@ tool_state
 /shopify
 /gh
 nvim/plugin/packer_compiled.lua
+nodemon.json

@@ -135,9 +135,15 @@ eval "$(gh completion -s zsh)"
 # go
 export PATH="$HOME/go/bin:$PATH"
 
-# volta
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
+# volta (uninstall)
+# export VOLTA_HOME="$HOME/.volta"
+# export PATH="$VOLTA_HOME/bin:$PATH"
+
+# direnv
+eval "$(direnv hook zsh)"
+
+# mise
+eval "$(~/.local/bin/mise activate zsh)"
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"

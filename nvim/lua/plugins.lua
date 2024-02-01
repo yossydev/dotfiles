@@ -14,7 +14,7 @@ packer.startup(function(use)
   }
   use {
    'nvim-tree/nvim-tree.lua',
-   requires = { 'nvim-tree/nvim-web-devicons', 'nvim-telescope/telescope.nvim'},
+   requires = { 'nvim-tree/nvim-web-devicons', 'nvim-telescope/telescope.nvim'}
   }
   use 'nvim-lualine/lualine.nvim' -- Statusline
   use 'nvim-lua/plenary.nvim' -- Common utilities
@@ -28,14 +28,23 @@ packer.startup(function(use)
   use 'williamboman/mason-lspconfig.nvim'
   use('MunifTanjim/prettier.nvim')
 
-  use 'glepnir/lspsaga.nvim' -- LSP UIs
+  use ({
+    'nvimdev/lspsaga.nvim',
+    after = 'nvim-lspconfig',
+    config = function()
+        require('lspsaga').setup({})
+    end,
+  })
   use 'L3MON4D3/LuaSnip'
   use {
-    'nvim-treesitter/nvim-treesitter',
-    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+      'nvim-treesitter/nvim-treesitter',
+      run = function()
+          local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+          ts_update()
+      end,
   }
   use 'kyazdani42/nvim-web-devicons' -- File icons
-  use 'nvim-telescope/telescope.nvim'
+  use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'

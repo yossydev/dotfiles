@@ -28,13 +28,7 @@ packer.startup(function(use)
   use 'williamboman/mason-lspconfig.nvim'
   use('MunifTanjim/prettier.nvim')
 
-  use ({
-    'nvimdev/lspsaga.nvim',
-    after = 'nvim-lspconfig',
-    config = function()
-        require('lspsaga').setup({})
-    end,
-  })
+  use 'nvimdev/lspsaga.nvim'
   use 'L3MON4D3/LuaSnip'
   use {
       'nvim-treesitter/nvim-treesitter',

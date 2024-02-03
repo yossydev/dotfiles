@@ -12,7 +12,7 @@ cp -i "${HOME}/.gitconfig" gitconfig
 
 # Neovimの設定ディレクトリをコピー
 echo "Copying nvim directory from ~/.config..."
-cp -r "${HOME}/.config/nvim" nvim
+cp -r "${HOME}/.config/nvim/." nvim
 
 # Starshipの設定ファイルをコピー
 echo "Copying starship.toml from ~/.config..."

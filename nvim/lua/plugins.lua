@@ -73,4 +73,8 @@ packer.startup(function(use)
         'stevearc/dressing.nvim', -- optional for vim.ui.select
     },
   }
+
+  -- Go
+  use 'ray-x/go.nvim'
+  use 'ray-x/guihua.lua' -- recommended if need floating window support
 end)

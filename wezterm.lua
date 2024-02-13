@@ -19,7 +19,7 @@ config.initial_rows = 60
 -- disable ligatures: https://wezfurlong.org/wezterm/config/font-shaping.html#advanced-font-shaping-options
 config.harfbuzz_features = {'calt=0', 'clig=0', 'liga=0'}
 
-config.font = wezterm.font('CaskaydiaCove Nerd Font Mono', {
+config.font = wezterm.font('Moralerspace Radon', {
   weight = 'Regular',
   stretch = 'Normal',
   style = 'Normal',

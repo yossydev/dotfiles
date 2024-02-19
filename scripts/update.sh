@@ -3,6 +3,10 @@
 # スクリプトが途中で失敗した場合に終了するように設定
 set -e
 
+# Homebrewの依存関係をインストール
+echo "Installing Homebrew dependencies..."
+brew bundle
+
 # ホームディレクトリからのファイルコピー
 echo "Copying dotfiles from home directory..."
 cp -i "${HOME}/.zshrc" zshrc

@@ -3,8 +3,11 @@
 # スクリプトが途中で失敗した場合に終了するように設定
 set -e
 
-# Homebrewの依存関係をインストール
-echo "Installing Homebrew dependencies..."
+echo "Updating Homebrew..."
+brew update
+echo "Dumping current Homebrew setup to Brewfile..."
+brew bundle dump --force --describe
+echo "All checks passed. Proceeding with Homebrew bundle..."
 brew bundle
 
 # ホームディレクトリからのファイルコピー

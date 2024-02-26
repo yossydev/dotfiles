@@ -13,6 +13,8 @@ tap "wez/wezterm"
 brew "act"
 # Generate compilation database for clang tooling
 brew "bear"
+# Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
+brew "clang-format"
 # Cloudflare Tunnel client (formerly Argo Tunnel)
 brew "cloudflared"
 # Cross-platform make
@@ -37,6 +39,8 @@ brew "docutils"
 brew "firebase-cli"
 # Command-line tools for fly.io services
 brew "flyctl"
+# GNU compiler collection
+brew "gcc"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
@@ -55,6 +59,8 @@ brew "ios-deploy"
 brew "jenv"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.12"
+# Next-gen compiler infrastructure
+brew "llvm"
 # Language Server for the Lua language
 brew "lua-language-server"
 # Just-In-Time Compiler (JIT) for the Lua programming language
@@ -113,6 +119,10 @@ brew "rust-analyzer"
 brew "rustup-init"
 # Cross-shell prompt for astronauts
 brew "starship"
+# Opinionated Lua code formatter
+brew "stylua"
+# LSP for TailwindCSS
+brew "tailwindcss-language-server"
 # Tool to build, change, and version infrastructure
 brew "terraform"
 # Terminal multiplexer
@@ -167,6 +177,8 @@ cask "google-chrome"
 cask "google-cloud-sdk"
 # Menu bar application for the IPFS peer-to-peer network
 cask "ipfs"
+# Open-source keystroke visualiser
+cask "keycastr"
 # Online collaborative whiteboard platform
 cask "miro"
 # Reverse proxy, secure introspectable tunnels to localhost
@@ -175,6 +187,8 @@ cask "ngrok"
 cask "notion"
 # Calendar for professionals and teams
 cask "notion-calendar"
+# Open-source software for live streaming and screen recording
+cask "obs"
 # Collaboration platform for API development
 cask "postman"
 # OpenVPN client

@@ -131,6 +131,12 @@ nvim_lsp.lua_ls.setup({
 	capabilities = capabilities,
 })
 
+-- mdx
+nvim_lsp.mdx_analyzer.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
 capabilities.offsetEncoding = { "utf-16" }
 -- C++
 nvim_lsp.clangd.setup({

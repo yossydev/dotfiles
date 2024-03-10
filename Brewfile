@@ -22,7 +22,7 @@ brew "cmake"
 # Platform built on V8 to build network applications
 brew "node"
 # Package acting as bridge between Node projects and their package managers
-brew "corepack"
+brew "corepack", link: false
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
 # Command-line interface for SQLite
@@ -51,6 +51,8 @@ brew "git-delta"
 brew "gitmoji"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# OpenType text shaping engine
+brew "harfbuzz"
 # Add GitHub support to git on the command-line
 brew "hub"
 # Install and debug iPhone apps from the command-line
@@ -92,7 +94,9 @@ brew "openconnect"
 # Development kit for the Java programming language
 brew "openjdk@17"
 # Fast, disk space efficient package manager
-brew "pnpm", link: false
+brew "pnpm"
+# Quick and easy command-line file transfer utility from any computer to another
+brew "portal"
 # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
 brew "prettier"
 # Prettier daemon
@@ -143,8 +147,6 @@ brew "yarn", link: false
 brew "zoxide"
 # Simple cli to manage Flutter SDK versions per project
 brew "leoafarias/fvm/fvm"
-# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
-brew "oven-sh/bun/bun"
 # Deploy modern application in seconds
 brew "qovery/qovery-cli/qovery-cli"
 # Tools for building Android applications
@@ -153,10 +155,14 @@ cask "android-studio"
 cask "arc"
 # Two-factor authentication software
 cask "authy"
+# Virtual Audio Driver
+cask "blackhole-2ch"
 # Web browser focusing on privacy
 cask "brave-browser"
 # Desktop wrapper for OpenAI ChatGPT
 cask "chatgpt"
+# Browser for SQLite databases
+cask "db-browser-for-sqlite"
 # Trains AIs to understand and translate texts
 cask "deepl"
 # Chat via the e-mail server network

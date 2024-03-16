@@ -69,6 +69,8 @@ brew "lua-language-server"
 brew "luajit"
 # Bare libuv bindings for lua
 brew "luv"
+# Easily convert Marp Markdown files into static HTML/CSS, PDF, PPT and images
+brew "marp-cli"
 # Ultra relevant, instant and typo-tolerant full-text search API
 brew "meilisearch"
 # Polyglot runtime manager (asdf rust clone)
@@ -142,7 +144,7 @@ brew "wasm-pack"
 # Refactoring tool for Erlang with emacs and Eclipse integration
 brew "wrangler"
 # JavaScript package manager
-brew "yarn", link: false
+brew "yarn"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # Simple cli to manage Flutter SDK versions per project
@@ -221,6 +223,8 @@ cask "wezterm"
 cask "wrike"
 # View output from scripts in the menu bar
 cask "xbar"
+# Simple menu bar app to download YouTube movies
+cask "youtube-downloader"
 # Multiplayer code editor
 cask "zed"
 # Desktop client for the Zulip team chat platform

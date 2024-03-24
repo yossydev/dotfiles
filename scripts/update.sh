@@ -27,6 +27,6 @@ cp -i "${HOME}/.config/starship.toml" starship.toml
 
 # miseの設定ファイルをコピー
 echo "Copying mise from ~/.config..."
-cp -i "${HOME}/.config/mise/" mise
+cp -r "${HOME}/.config/mise/." mise
 
 echo "Copy complete!"

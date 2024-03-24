@@ -13,6 +13,8 @@ tap "wez/wezterm"
 brew "act"
 # Generate compilation database for clang tooling
 brew "bear"
+# Command-line interface for SQLite
+brew "sqlite"
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
 # Cloudflare Tunnel client (formerly Argo Tunnel)
@@ -25,10 +27,6 @@ brew "node"
 brew "corepack", link: false
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
-# Command-line interface for SQLite
-brew "sqlite"
-# Secure runtime for JavaScript and TypeScript
-brew "deno"
 # Load/unload environment variables based on $PWD
 brew "direnv"
 # Pack, ship and run any application as a lightweight container
@@ -59,8 +57,6 @@ brew "hub"
 brew "ios-deploy"
 # Manage your Java environment
 brew "jenv"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.12"
 # Next-gen compiler infrastructure
 brew "llvm"
 # Language Server for the Lua language
@@ -95,8 +91,6 @@ brew "nss"
 brew "openconnect"
 # Development kit for the Java programming language
 brew "openjdk@17"
-# Fast, disk space efficient package manager
-brew "pnpm"
 # Quick and easy command-line file transfer utility from any computer to another
 brew "portal"
 # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
@@ -117,8 +111,6 @@ brew "python@3.8"
 brew "rbenv"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Safe, concurrent, practical language
-brew "rust"
 # Experimental Rust compiler front-end for IDEs
 brew "rust-analyzer"
 # Rust toolchain installer

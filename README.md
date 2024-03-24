@@ -28,10 +28,30 @@ To install these dotfiles and configure your environment, follow these steps:
 2. Execute the setup script:
 
    ```
-   ./scripts/setup.sh
+   $ make setup
    ```
 
-This script will install Homebrew (on macOS), fetch and install packages from the Brewfile, and place the dotfiles in your home directory.
+   Alternatively, if you prefer to run the script directly:
+
+   ```
+   $ ./scripts/setup.sh
+   ```
+
+   This script will install Homebrew (on macOS), fetch and install packages from the Brewfile, and place the dotfiles in your home directory. The Makefile simplifies the execution of scripts, making it easier to manage and run setup and update commands.
+
+## Updating Your Configuration
+
+To update your configuration and synchronize with the latest changes in the repository, run:
+
+```
+$ make update
+```
+
+Or directly:
+
+```
+$ ./scripts/update.sh
+```
 
 ## Warning
 

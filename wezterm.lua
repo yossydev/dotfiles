@@ -31,71 +31,15 @@ config.font = wezterm.font("Moralerspace Radon", {
 })
 config.font_size = 14.0
 
--- port from: https://github.com/wadackel/vim-dogrun/blob/main/colors/dogrun.vim
-config.colors = {
-	foreground = "#9ea3c0",
-	background = "#222433",
-	cursor_fg = "#222433",
-	cursor_bg = "#9ea3c0",
-	selection_bg = "#363e7f",
-	ansi = {
-		"#111219",
-		"#c2616b",
-		"#7cbe8c",
-		"#8e8a6f",
-		"#4c89ac",
-		"#6c75cb",
-		"#73c1a9",
-		"#9ea3c0",
-	},
-	brights = {
-		"#545c8c",
-		"#b871b8",
-		"#7cbe8c",
-		"#a8a384",
-		"#589ec6",
-		"#929be5",
-		"#59b6b6",
-		"#9ea3c0",
-	},
-	tab_bar = {
-		background = "#1b1f2f",
-		active_tab = {
-			bg_color = "#444b71",
-			fg_color = "#c6c8d1",
-			intensity = "Normal",
-			underline = "None",
-			italic = false,
-			strikethrough = false,
-		},
-		inactive_tab = {
-			bg_color = "#282d3e",
-			fg_color = "#c6c8d1",
-			intensity = "Normal",
-			underline = "None",
-			italic = false,
-			strikethrough = false,
-		},
-		inactive_tab_hover = {
-			bg_color = "#1b1f2f",
-			fg_color = "#c6c8d1",
-			intensity = "Normal",
-			underline = "None",
-			italic = true,
-			strikethrough = false,
-		},
-		new_tab = {
-			bg_color = "#1b1f2f",
-			fg_color = "#c6c8d1",
-			italic = false,
-		},
-		new_tab_hover = {
-			bg_color = "#444b71",
-			fg_color = "#c6c8d1",
-			italic = false,
-		},
-	},
-}
+local function scheme_for_appearance(appearance)
+	if appearance:find("Dark") then
+		return "Catppuccin Frappe" -- ダークモード時
+	else
+		return "Catppuccin latte" -- ライトモード時
+	end
+end
+
+config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
 
 config.enable_scroll_bar = false
 config.use_fancy_tab_bar = false

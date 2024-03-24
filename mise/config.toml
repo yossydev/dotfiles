@@ -1,2 +1,11 @@
+[settings]
+experimental = true
+
 [tools]
-node = "20"
+node = '20'
+go = ['1.21', '1.18']
+watchexec = 'latest'
+rust = "latest"
+python = "latest"
+deno = "latest"
+bun = "latest"

@@ -2,7 +2,7 @@
 experimental = true
 
 [tools]
-node = '20'
+node = "20.11.0"
 go = ['1.21', '1.18']
 watchexec = 'latest'
 rust = "latest"

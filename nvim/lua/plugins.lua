@@ -20,7 +20,13 @@ require("lazy").setup({
 	{ "hrsh7th/cmp-nvim-lsp" }, -- nvim-cmp source for neovim's built-in LSP
 	{ "hrsh7th/cmp-buffer" }, -- nvim-cmp source for buffer words
 	{ "neovim/nvim-lspconfig" }, -- LSP
-	{ "nvimtools/none-ls.nvim" }, -- Use Neovim as a language server
+	{
+		"nvimtools/none-ls.nvim",
+		dependencies = {
+			"nvimtools/none-ls-extras.nvim",
+			"gbprod/none-ls-shellcheck.nvim",
+		},
+	},
 	{ "williamboman/mason.nvim" },
 	{ "williamboman/mason-lspconfig.nvim" },
 	{ "MunifTanjim/prettier.nvim" },

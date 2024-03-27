@@ -49,14 +49,14 @@ local biomeJsonPath = rootPath .. "/biome.json"
 
 if file_exists(biomeJsonPath) then
 	setup_null_ls({
-		null_ls.builtins.formatting.rome.with({ command = "biome" }),
+		null_ls.builtins.formatting.biome,
 		null_ls.builtins.diagnostics.fish,
 	})
 	print("biome.json found. LSP formatting with Biome is enabled.")
 else
 	setup_null_ls({
 		null_ls.builtins.formatting.prettierd,
-		null_ls.builtins.diagnostics.eslint.with({
+		require("none-ls.diagnostics.eslint").with({
 			extra_args = function(params)
 				local file_types = {
 					"eslint.config.js",

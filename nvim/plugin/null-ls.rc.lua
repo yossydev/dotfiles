@@ -56,6 +56,7 @@ if file_exists(biomeJsonPath) then
 else
 	setup_null_ls({
 		null_ls.builtins.formatting.prettierd,
+		-- ref: https://github.com/johnnyBira/neovim-config/blob/84bb2a40675ff5e64cbd69e5f410dfae653a89c5/lua/bira/plugins/null-ls.lua
 		require("none-ls.diagnostics.eslint").with({
 			extra_args = function(params)
 				local file_types = {

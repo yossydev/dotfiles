@@ -21,8 +21,6 @@ brew "clang-format"
 brew "cloudflared"
 # Cross-platform make
 brew "cmake"
-# Platform built on V8 to build network applications
-brew "node"
 # Package acting as bridge between Node projects and their package managers
 brew "corepack", link: false
 # Get a file from an HTTP, HTTPS or FTP server
@@ -33,6 +31,8 @@ brew "direnv"
 brew "docker", link: false
 # Text processing system for reStructuredText
 brew "docutils"
+# AST-based pattern checker for JavaScript
+brew "eslint"
 # Firebase command-line tools
 brew "firebase-cli"
 # Command-line tools for fly.io services
@@ -47,8 +47,6 @@ brew "git"
 brew "git-delta"
 # Interactive command-line tool for using emoji in commit messages
 brew "gitmoji"
-# Open source programming language to build simple/reliable/efficient software
-brew "go"
 # OpenType text shaping engine
 brew "harfbuzz"
 # Add GitHub support to git on the command-line
@@ -83,8 +81,6 @@ brew "tree-sitter"
 brew "neovim"
 # Small build system for use with gyp or CMake
 brew "ninja"
-# Node.js version manager
-brew "nodebrew"
 # Libraries for security-enabled client and server applications
 brew "nss"
 # Open client for Cisco AnyConnect VPN
@@ -123,8 +119,6 @@ brew "stylua"
 brew "tailwindcss-language-server"
 # Tool to build, change, and version infrastructure
 brew "terraform"
-# Terminal multiplexer
-brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Language Server Protocol implementation for TypeScript wrapping tsserver
@@ -135,8 +129,6 @@ brew "vercel-cli"
 brew "wasm-pack"
 # Refactoring tool for Erlang with emacs and Eclipse integration
 brew "wrangler"
-# JavaScript package manager
-brew "yarn"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # Simple cli to manage Flutter SDK versions per project
@@ -145,22 +137,16 @@ brew "leoafarias/fvm/fvm"
 brew "qovery/qovery-cli/qovery-cli"
 # Tools for building Android applications
 cask "android-studio"
-# Chromium based browser
-cask "arc"
 # Two-factor authentication software
 cask "authy"
 # Virtual Audio Driver
 cask "blackhole-2ch"
 # Web browser focusing on privacy
 cask "brave-browser"
-# Desktop wrapper for OpenAI ChatGPT
-cask "chatgpt"
 # Browser for SQLite databases
 cask "db-browser-for-sqlite"
 # Trains AIs to understand and translate texts
 cask "deepl"
-# Chat via the e-mail server network
-cask "deltachat"
 # Voice and text chat software
 cask "discord"
 # App to build and share containerised applications and microservices
@@ -175,8 +161,6 @@ cask "github"
 cask "google-chrome"
 # Set of tools to manage resources and applications hosted on Google Cloud
 cask "google-cloud-sdk"
-# Menu bar application for the IPFS peer-to-peer network
-cask "ipfs"
 # Open-source keystroke visualiser
 cask "keycastr"
 # Online collaborative whiteboard platform
@@ -215,8 +199,6 @@ cask "wezterm"
 cask "wrike"
 # View output from scripts in the menu bar
 cask "xbar"
-# Simple menu bar app to download YouTube movies
-cask "youtube-downloader"
 # Multiplayer code editor
 cask "zed"
 # Desktop client for the Zulip team chat platform

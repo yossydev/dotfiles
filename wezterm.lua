@@ -24,6 +24,7 @@ config.initial_rows = 60
 -- disable ligatures: https://wezfurlong.org/wezterm/config/font-shaping.html#advanced-font-shaping-options
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
+-- Fonts used: https://github.com/yuru7/moralerspace/releases
 config.font = wezterm.font("Moralerspace Radon", {
 	weight = "Regular",
 	stretch = "Normal",
@@ -32,11 +33,11 @@ config.font = wezterm.font("Moralerspace Radon", {
 config.font_size = 14.0
 
 local function scheme_for_appearance(appearance)
-	if appearance:find("Dark") then
-		return "Catppuccin Frappe" -- ダークモード時
-	else
-		return "Catppuccin latte" -- ライトモード時
-	end
+	-- if appearance:find("Dark") then
+	-- return "Catppuccin Frappe" -- ダークモード時
+	-- else
+	return "Catppuccin latte" -- ライトモード時
+	-- end
 end
 
 config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())

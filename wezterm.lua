@@ -25,7 +25,7 @@ config.initial_rows = 60
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
 -- Fonts used: https://github.com/yuru7/moralerspace/releases
-config.font = wezterm.font("Moralerspace Radon", {
+config.font = wezterm.font("Moralerspace Radon NF", {
 	weight = "Regular",
 	stretch = "Normal",
 	style = "Normal",

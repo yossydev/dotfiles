@@ -112,10 +112,10 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # java
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-export JAVA_HOME="/path/to/java17"
 
 # jEnv
-export PATH="$HOME/.jenv/bin:$PATH"
+export PATH="$JENV_HOME/bin:$PATH"
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 eval "$(jenv init -)"
 
 # Flutter

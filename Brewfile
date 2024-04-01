@@ -7,14 +7,13 @@ tap "lencx/chatgpt", "https://github.com/lencx/ChatGPT.git"
 tap "leoafarias/fvm"
 tap "oven-sh/bun"
 tap "qovery/qovery-cli"
+tap "ruiokazaki/gpt-naming"
 tap "universal-ctags/universal-ctags"
 tap "wez/wezterm"
 # Run your GitHub Actions locally
 brew "act"
 # Generate compilation database for clang tooling
 brew "bear"
-# Command-line interface for SQLite
-brew "sqlite"
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
 # Cloudflare Tunnel client (formerly Argo Tunnel)
@@ -55,6 +54,8 @@ brew "hub"
 brew "ios-deploy"
 # Manage your Java environment
 brew "jenv"
+# Provides library functionality for FIDO U2F & FIDO 2.0, including USB
+brew "libfido2"
 # Next-gen compiler infrastructure
 brew "llvm"
 # Language Server for the Lua language
@@ -103,6 +104,10 @@ brew "python@3.11"
 brew "tcl-tk"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.8"
+# CLI tool that randomly returns words that can be used for code review approve
+brew "rando_lgtm"
+# Install various Ruby versions and implementations
+brew "ruby-build"
 # Ruby version manager
 brew "rbenv"
 # Search tool like grep and The Silver Searcher
@@ -123,6 +128,8 @@ brew "terraform"
 brew "tree"
 # Language Server Protocol implementation for TypeScript wrapping tsserver
 brew "typescript-language-server"
+# Maintained ctags implementation
+brew "universal-ctags", args: ["HEAD"]
 # Command-line interface for Vercel
 brew "vercel-cli"
 # Your favorite rust -> wasm workflow tool!
@@ -133,8 +140,12 @@ brew "wrangler"
 brew "zoxide"
 # Simple cli to manage Flutter SDK versions per project
 brew "leoafarias/fvm/fvm"
+# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
+brew "oven-sh/bun/bun"
 # Deploy modern application in seconds
 brew "qovery/qovery-cli/qovery-cli"
+# Tools for the Android SDK
+cask "android-sdk"
 # Tools for building Android applications
 cask "android-studio"
 # Two-factor authentication software
@@ -177,6 +188,8 @@ cask "obs"
 cask "postman"
 # OpenVPN client
 cask "pritunl"
+# All-in-one bookmark manager
+cask "raindropio"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Digital design and prototyping platform

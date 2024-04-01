@@ -1,9 +1,8 @@
 #!/bin/bash
-
 set -e
 
 mkdir -p "${HOME}/.config/nvim"
-mkdir -p "${HOME}/.config"
+mkdir -p "${HOME}/.config/mise"
 
 echo "Copying dotfiles to home directory..."
 cp zshrc "${HOME}/.zshrc"
@@ -15,7 +14,10 @@ echo "Copying nvim directory to ~/.config..."
 cp -r nvim "${HOME}/.config/"
 
 echo "Copying starship.toml to ~/.config..."
-cp starship.toml "${HOME}/.config/"
+cp starship.toml "${HOME}/.config/starship.toml"
+
+echo "Copying mise directory to ~/.config..."
+cp -r mise "${HOME}/.config/"
 
 if ! command -v brew &>/dev/null; then
     echo "Installing Homebrew..."

@@ -3,6 +3,7 @@ set -e
 
 mkdir -p "${HOME}/.config/nvim"
 mkdir -p "${HOME}/.config/mise"
+mkdir -p "${HOME}/.config/git"
 
 echo "Copying dotfiles to home directory..."
 cp zshrc "${HOME}/.zshrc"
@@ -15,6 +16,9 @@ cp -r nvim "${HOME}/.config/"
 
 echo "Copying starship.toml to ~/.config..."
 cp starship.toml "${HOME}/.config/starship.toml"
+
+echo "Copying nvim directory to ~/.config..."
+cp global_git_ignore "${HOME}/.config/git/"
 
 echo "Copying mise directory to ~/.config..."
 cp -r mise "${HOME}/.config/"

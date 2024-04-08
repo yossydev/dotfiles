@@ -4,7 +4,7 @@ wezterm.on("window-config-reloaded", function(window)
 	window:toast_notification("wezterm", "Configuration reloaded!", nil, 4000)
 end)
 
-wezterm.on("format-tab-title", function(tab)
+wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
 	return {
 		{ Text = " " .. tab.active_pane.title .. " " },
 	}

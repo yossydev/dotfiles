@@ -24,7 +24,7 @@ cp -i "${HOME}/.config/starship.toml" starship.toml
 echo "Copying mise from ~/.config..."
 cp -r "${HOME}/.config/mise/." mise
 
-echo "Copying mise from ~/.config..."
-cp -i "${HOME}/.config/git/ignore" global_git_ignore
+echo "Copying ignore from ~/.config..."
+cp -i "${HOME}/.config/git/." global_git_ignore
 
 echo "Copy complete!"

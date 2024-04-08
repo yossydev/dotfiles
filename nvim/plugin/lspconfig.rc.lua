@@ -82,6 +82,30 @@ nvim_lsp.tsserver.setup({
 	filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
 	cmd = { "typescript-language-server", "--stdio" },
 	capabilities = capabilities,
+	single_file_support = false,
+})
+
+-- Deno
+nvim_lsp.denols.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	root_dir = nvim_lsp.util.root_pattern("deno.json"),
+	init_options = {
+		lint = true,
+		unstable = true,
+		suggest = {
+			imports = {
+				hosts = {
+					["https://deno.land"] = true,
+					["https://cdn.nest.land"] = true,
+					["https://crux.land"] = true,
+				},
+			},
+		},
+	},
+	on_init = function(client)
+		vim.notify("denols initialized for root directory: " .. client.config.root_dir, vim.log.levels.INFO)
+	end,
 })
 
 nvim_lsp.sourcekit.setup({

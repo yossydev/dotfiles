@@ -5,13 +5,14 @@ tap "homebrew/cask-versions"
 tap "homebrew/services"
 tap "lencx/chatgpt", "https://github.com/lencx/ChatGPT.git"
 tap "leoafarias/fvm"
-tap "oven-sh/bun"
 tap "qovery/qovery-cli"
 tap "ruiokazaki/gpt-naming"
 tap "universal-ctags/universal-ctags"
 tap "wez/wezterm"
 # Run your GitHub Actions locally
 brew "act"
+# Build full-stack web and mobile apps in hours. Easy to start, easy to scale
+brew "aws-amplify"
 # Generate compilation database for clang tooling
 brew "bear"
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
@@ -140,8 +141,6 @@ brew "wrangler"
 brew "zoxide"
 # Simple cli to manage Flutter SDK versions per project
 brew "leoafarias/fvm/fvm"
-# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
-brew "oven-sh/bun/bun"
 # Deploy modern application in seconds
 brew "qovery/qovery-cli/qovery-cli"
 # Tools for the Android SDK

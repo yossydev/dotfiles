@@ -13,6 +13,10 @@ tap "wez/wezterm"
 brew "act"
 # Build full-stack web and mobile apps in hours. Easy to start, easy to scale
 brew "aws-amplify"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.11"
+# Official Amazon AWS command-line interface
+brew "awscli"
 # Generate compilation database for clang tooling
 brew "bear"
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
@@ -55,6 +59,8 @@ brew "hub"
 brew "ios-deploy"
 # Manage your Java environment
 brew "jenv"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
 # Provides library functionality for FIDO U2F & FIDO 2.0, including USB
 brew "libfido2"
 # Next-gen compiler infrastructure
@@ -99,8 +105,6 @@ brew "prettierd"
 brew "pyenv"
 # Static type checker for Python
 brew "pyright"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.11"
 # Tool Command Language
 brew "tcl-tk"
 # Interpreted, interactive, object-oriented programming language
@@ -124,7 +128,9 @@ brew "stylua"
 # LSP for TailwindCSS
 brew "tailwindcss-language-server"
 # Tool to build, change, and version infrastructure
-brew "terraform"
+brew "terraform", link: false
+# Terraform version manager inspired by rbenv
+brew "tfenv"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Language Server Protocol implementation for TypeScript wrapping tsserver
@@ -191,6 +197,8 @@ cask "pritunl"
 cask "raindropio"
 # Control your tools with a few keystrokes
 cask "raycast"
+# Plugin for AWS CLI to start and end sessions that connect to managed instances
+cask "session-manager-plugin"
 # Digital design and prototyping platform
 cask "sketch"
 # Team communication and collaboration software
@@ -217,6 +225,7 @@ cask "xbar"
 cask "zulip"
 vscode "astro-build.astro-vscode"
 vscode "asvetliakov.vscode-neovim"
+vscode "biomejs.biome"
 vscode "bradlc.vscode-tailwindcss"
 vscode "clinyong.vscode-css-modules"
 vscode "csstools.postcss"

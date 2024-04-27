@@ -14,6 +14,7 @@ cp -i "${HOME}/.zshrc" zshrc
 cp -i "${HOME}/.zprofile" zprofile
 cp -i "${HOME}/.wezterm.lua" wezterm.lua
 cp -i "${HOME}/.gitconfig" gitconfig
+cp -i "${HOME}/.gitignore_global" gitignore_global
 
 echo "Copying nvim directory from ~/.config..."
 cp -r "${HOME}/.config/nvim/." nvim
@@ -23,8 +24,5 @@ cp -i "${HOME}/.config/starship.toml" starship.toml
 
 echo "Copying mise from ~/.config..."
 cp -r "${HOME}/.config/mise/." mise
-
-echo "Copying ignore from ~/.config..."
-cp -i "${HOME}/.config/git/." global_git_ignore
 
 echo "Copy complete!"

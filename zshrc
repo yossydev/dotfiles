@@ -110,14 +110,6 @@ export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-# java
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-
-# jEnv
-export PATH="$JENV_HOME/bin:$PATH"
-if which jenv > /dev/null; then eval "$(jenv init -)"; fi
-eval "$(jenv init -)"
-
 # Flutter
 export PATH="$PATH:`pwd`/flutter/bin"
 

@@ -57,8 +57,6 @@ brew "harfbuzz"
 brew "hub"
 # Install and debug iPhone apps from the command-line
 brew "ios-deploy"
-# Manage your Java environment
-brew "jenv"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Provides library functionality for FIDO U2F & FIDO 2.0, including USB
@@ -93,8 +91,6 @@ brew "ninja"
 brew "nss"
 # Open client for Cisco AnyConnect VPN
 brew "openconnect"
-# Development kit for the Java programming language
-brew "openjdk@17"
 # Quick and easy command-line file transfer utility from any computer to another
 brew "portal"
 # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
@@ -169,6 +165,8 @@ cask "discord"
 cask "docker"
 # Reimagine your terminal
 cask "fig"
+# Web browser
+cask "firefox"
 # UI toolkit for building applications for mobile, web and desktop
 cask "flutter"
 # Desktop client for GitHub repositories
@@ -223,6 +221,7 @@ cask "wrike"
 cask "xbar"
 # Desktop client for the Zulip team chat platform
 cask "zulip"
+vscode "amazonwebservices.codewhisperer-for-command-line-companion"
 vscode "astro-build.astro-vscode"
 vscode "asvetliakov.vscode-neovim"
 vscode "biomejs.biome"

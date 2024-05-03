@@ -83,6 +83,7 @@ nvim_lsp.tsserver.setup({
 	cmd = { "typescript-language-server", "--stdio" },
 	capabilities = capabilities,
 	single_file_support = false,
+	root_dir = nvim_lsp.util.root_pattern("package.json"),
 })
 
 -- Deno

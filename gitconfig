@@ -81,8 +81,9 @@
   plo = pull origin
   pu = push
   puo = push origin
+  puof = push origin --force-with-lease
   l = log
-  lo = log --oneline
+  lo = log --oneline --graph --all
 
 [filter "lfs"]
   clean = git-lfs clean -- %f
@@ -95,5 +96,9 @@
 
 [github]
   user = yossydev
+
 [credential]
 	helper = osxkeychain
+
+[grep]
+	lineNumber = true

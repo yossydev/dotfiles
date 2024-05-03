@@ -3582,7 +3582,7 @@
         }
       },
       "spotify": {
-        "version": "1.2.35.663,b699649e,5769",
+        "version": "1.2.36.959,04bf500c,859",
         "options": {
           "full_name": "spotify"
         }
@@ -3759,7 +3759,7 @@
   "system": {
     "macos": {
       "sonoma": {
-        "HOMEBREW_VERSION": "4.2.20-89-ge944830",
+        "HOMEBREW_VERSION": "4.2.20-104-gdfbf269",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "15.3.0.0.1.1708646388",

@@ -51,6 +51,11 @@ require("lazy").setup({
 	{ "sindrets/diffview.nvim" },
 	{ "rust-lang/rust.vim" },
 	{ "simrat39/rust-tools.nvim" },
+	{
+		"m4xshen/hardtime.nvim",
+		dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+		opts = {},
+	},
 
 	-- Flutter
 	{ "akinsho/flutter-tools.nvim" },

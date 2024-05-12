@@ -30,14 +30,21 @@ require("lazy").setup({
 	{ "williamboman/mason.nvim" },
 	{ "williamboman/mason-lspconfig.nvim" },
 	{ "MunifTanjim/prettier.nvim" },
-	{ "nvimdev/lspsaga.nvim" },
+	"nvimdev/lspsaga.nvim",
+	event = "LspAttach",
+	dependencies = {
+		"nvim-treesitter/nvim-treesitter",
+		"nvim-tree/nvim-web-devicons",
+		"neovim/nvim-lspconfig",
+		"simrat39/rust-tools.nvim",
+	},
 	{ "L3MON4D3/LuaSnip" },
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 	},
-	{ "kyazdani42/nvim-web-devicons" }, -- File icons
 	{ "nvim-telescope/telescope.nvim" },
+	{ "nvim-tree/nvim-web-devicons" },
 	{ "nvim-telescope/telescope-file-browser.nvim" },
 	{ "windwp/nvim-autopairs" },
 	{ "windwp/nvim-ts-autotag" },
@@ -47,7 +54,7 @@ require("lazy").setup({
 	{ "akinsho/nvim-bufferline.lua" },
 	-- { "github/copilot.vim" },
 	{ "lewis6991/gitsigns.nvim" },
-	{ "dinhhuy258/git.nvim" }, -- For git blame & browse
+	{ "dinhhuy258/git.nvim" },
 	{ "sindrets/diffview.nvim" },
 	{ "rust-lang/rust.vim" },
 	{ "simrat39/rust-tools.nvim" },

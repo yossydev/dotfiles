@@ -4,6 +4,7 @@ if not status then
 end
 
 icons.setup({
-	ovverride = {},
+	override = {},
 	default = true,
+	strict = true,
 })

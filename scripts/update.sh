@@ -17,7 +17,7 @@ cp -i "${HOME}/.gitconfig" gitconfig
 cp -i "${HOME}/.gitignore_global" gitignore_global
 
 echo "Copying nvim directory from ~/.config..."
-cp -r "${HOME}/.config/nvim/." nvim
+rsync -av --exclude='.git' --exclude='.cache' "${HOME}/.config/nvim/" nvim
 
 echo "Copying starship.toml from ~/.config..."
 cp -i "${HOME}/.config/starship.toml" starship.toml

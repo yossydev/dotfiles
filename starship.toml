@@ -18,9 +18,17 @@ format = """\
 
 command_timeout = 800
 
+[shell]
+disabled = false
+style = "bold"
+bash_indicator = "[bsh](#a593e0)"
+zsh_indicator = "[zsh](#fff1b9)"
+powershell_indicator = "[psh](#f7aa97)"
+cmd_indicator = "[cmd](#a3daff)"
+
 [character]
-success_symbol = "[❯](bold fg:79)"
-error_symbol = "[❯](bold fg:170)"
+success_symbol = "[❯](bold #00ff00)"
+error_symbol = "[✘](bold #ff4444)"
 vicmd_symbol = "[❮](bold fg:79)"
 
 [battery]
@@ -38,3 +46,4 @@ style = "fg:104"
 
 [git_status]
 style = "fg:104"
+

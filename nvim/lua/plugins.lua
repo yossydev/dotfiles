@@ -52,7 +52,10 @@ require("lazy").setup({
 	{ "norcalli/nvim-colorizer.lua" },
 	{ "folke/zen-mode.nvim" },
 	{ "akinsho/nvim-bufferline.lua" },
-	-- { "github/copilot.vim" },
+	{
+		"github/copilot.vim",
+		lazy = false,
+	},
 	{ "lewis6991/gitsigns.nvim" },
 	{ "dinhhuy258/git.nvim" },
 	{ "sindrets/diffview.nvim" },

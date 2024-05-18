@@ -1,3 +1,4 @@
+tap "aws/tap"
 tap "dart-lang/dart"
 tap "fsouza/prettierd"
 tap "homebrew/bundle"
@@ -13,10 +14,18 @@ tap "wez/wezterm"
 brew "act"
 # Build full-stack web and mobile apps in hours. Easy to start, easy to scale
 brew "aws-amplify"
+# CLI tool to build, test, debug, and deploy Serverless applications using AWS SAM
+brew "aws-sam-cli"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
 # Official Amazon AWS command-line interface
 brew "awscli"
+# GNU internationalization (i18n) and localization (l10n) library
+brew "gettext"
+# OpenType text shaping engine
+brew "harfbuzz"
+# Google's own build tool
+brew "bazel"
 # Generate compilation database for clang tooling
 brew "bear"
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
@@ -51,8 +60,6 @@ brew "git"
 brew "git-delta"
 # Interactive command-line tool for using emoji in commit messages
 brew "gitmoji"
-# OpenType text shaping engine
-brew "harfbuzz"
 # Add GitHub support to git on the command-line
 brew "hub"
 # Install and debug iPhone apps from the command-line
@@ -113,8 +120,6 @@ brew "ruby-build"
 brew "rbenv"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Experimental Rust compiler front-end for IDEs
-brew "rust-analyzer"
 # Rust toolchain installer
 brew "rustup-init"
 # Cross-shell prompt for astronauts

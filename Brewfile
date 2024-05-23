@@ -62,6 +62,8 @@ brew "git-delta"
 brew "gitmoji"
 # Add GitHub support to git on the command-line
 brew "hub"
+# Command-line benchmarking tool
+brew "hyperfine"
 # Install and debug iPhone apps from the command-line
 brew "ios-deploy"
 # Lightweight and flexible command-line JSON processor

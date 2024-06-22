@@ -3,7 +3,7 @@
   email = codeyy021@gmail.com
 
 [color]
-  ui = auto
+	ui = auto
 
 [pager]
   diff = delta
@@ -43,7 +43,7 @@
   attributesfile = ~/.gitattributes
   excludesfile = ~/.gitignore_global
   precomposeUnicode = true
-  ignorecase = false
+	ignorecase = false
 
 [merge]
   tool = nvimdiff
@@ -83,7 +83,7 @@
   puo = push origin
   puof = push origin --force-with-lease
   l = log
-  lo = log --oneline --graph --all
+  lo = log --oneline --graph
 
 [filter "lfs"]
   clean = git-lfs clean -- %f

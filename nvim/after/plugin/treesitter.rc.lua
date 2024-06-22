@@ -25,6 +25,7 @@ ts.setup({
 		"lua",
 		"ron",
 		"rust",
+		"javascript",
 	},
 })
 

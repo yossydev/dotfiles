@@ -168,8 +168,6 @@ cask "blackhole-2ch"
 cask "brave-browser"
 # Browser for SQLite databases
 cask "db-browser-for-sqlite"
-# Trains AIs to understand and translate texts
-cask "deepl"
 # Voice and text chat software
 cask "discord"
 # App to build and share containerised applications and microservices

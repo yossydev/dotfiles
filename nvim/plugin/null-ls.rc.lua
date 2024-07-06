@@ -44,38 +44,46 @@ local function setup_null_ls(sources)
 	})
 end
 
+local use_deno = vim.fn.filereadable("deno.json") == 1
 
-setup_null_ls({
+local sources = {
 	null_ls.builtins.formatting.prettierd,
-	-- ref: https://github.com/johnnyBira/neovim-config/blob/84bb2a40675ff5e64cbd69e5f410dfae653a89c5/lua/bira/plugins/null-ls.lua
-	require("none-ls.diagnostics.eslint").with({
-		extra_args = function(params)
-			local file_types = {
-				"eslint.config.js",
-				"eslint.config.mjs",
-				".eslintrc.js",
-				".eslintrc.cjs",
-				".eslintrc.yaml",
-				".eslintrc.yml",
-				".eslintrc.json",
-				".eslintrc",
-			}
-			for _, file_type in ipairs(file_types) do
-				local config_path = params.root .. "/" .. file_type
-				if file_exists(config_path) then
-					return { "--config", config_path }
-				end
-			end
-			return {}
-		end,
-		diagnostics_format = "[eslint] #{m}\n(#{c})",
-	}),
 	null_ls.builtins.diagnostics.fish,
 	null_ls.builtins.formatting.stylua,
 	null_ls.builtins.formatting.clang_format,
 	null_ls.builtins.formatting.biome,
 	null_ls.builtins.diagnostics.fish,
-})
+}
+
+if not use_deno then
+	table.insert(
+		sources,
+		require("none-ls.diagnostics.eslint").with({
+			extra_args = function(params)
+				local file_types = {
+					"eslint.config.js",
+					"eslint.config.mjs",
+					".eslintrc.js",
+					".eslintrc.cjs",
+					".eslintrc.yaml",
+					".eslintrc.yml",
+					".eslintrc.json",
+					".eslintrc",
+				}
+				for _, file_type in ipairs(file_types) do
+					local config_path = params.root .. "/" .. file_type
+					if file_exists(config_path) then
+						return { "--config", config_path }
+					end
+				end
+				return {}
+			end,
+			diagnostics_format = "[eslint] #{m}\n(#{c})",
+		})
+	)
+end
+
+setup_null_ls(sources)
 
 vim.api.nvim_create_user_command("DisableLspFormatting", function()
 	vim.api.nvim_clear_autocmds({ group = augroup, buffer = 0 })

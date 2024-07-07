@@ -126,12 +126,6 @@ nvim_lsp.gopls.setup({
 	capabilities = capabilities,
 })
 
--- Rust
-nvim_lsp.rust_analyzer.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-})
-
 -- Biome
 nvim_lsp.biome.setup({
 	on_attach = on_attach,

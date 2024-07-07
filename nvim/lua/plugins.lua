@@ -60,7 +60,10 @@ require("lazy").setup({
 	{ "dinhhuy258/git.nvim" },
 	{ "sindrets/diffview.nvim" },
 	{ "rust-lang/rust.vim" },
-	{ "simrat39/rust-tools.nvim" },
+	{
+		"mrcjkb/rustaceanvim",
+		lazy = false, -- This plugin is already lazy
+	},
 	{
 		"m4xshen/hardtime.nvim",
 		dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },

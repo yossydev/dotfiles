@@ -129,13 +129,13 @@ export PATH="$HOME/go/bin:$PATH"
 # direnv
 eval "$(direnv hook zsh)"
 
-# bun completions
-[ -s "/Users/yy/.bun/_bun" ] && source "/Users/yy/.bun/_bun"
-
 
 [[ -f "$HOME/fig-export/dotfiles/dotfile.zsh" ]] && builtin source "$HOME/fig-export/dotfiles/dotfile.zsh"
 
-export PATH="/Users/s20106/.moon/bin:$PATH"
+export PATH="$HOME/.moon/bin:$PATH"
+
+# v8
+export PATH="$HOME/Desktop/OSS/depot_tools:$PATH"
 
 # Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"

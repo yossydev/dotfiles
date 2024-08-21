@@ -22,6 +22,8 @@ brew "python@3.11"
 brew "awscli"
 # GNU internationalization (i18n) and localization (l10n) library
 brew "gettext"
+# Core application library for C
+brew "glib"
 # OpenType text shaping engine
 brew "harfbuzz"
 # Google's own build tool
@@ -102,6 +104,8 @@ brew "ninja"
 brew "nss"
 # Open client for Cisco AnyConnect VPN
 brew "openconnect"
+# Development kit for the Java programming language
+brew "openjdk@11"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@1.1"
 # Quick and easy command-line file transfer utility from any computer to another
@@ -127,7 +131,7 @@ brew "rbenv"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Rust toolchain installer
-brew "rustup-init"
+brew "rustup"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Opinionated Lua code formatter
@@ -148,6 +152,8 @@ brew "universal-ctags", args: ["HEAD"]
 brew "vercel-cli"
 # Your favorite rust -> wasm workflow tool!
 brew "wasm-pack"
+# Cross-platform C++ GUI toolkit
+brew "wxwidgets"
 # Refactoring tool for Erlang with emacs and Eclipse integration
 brew "wrangler"
 # Shell extension to navigate your filesystem faster
@@ -266,6 +272,10 @@ vscode "mquandalle.graphql"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-ceintl.vscode-language-pack-ja"
 vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode.cmake-tools"
+vscode "ms-vscode.cpptools"
+vscode "ms-vscode.cpptools-extension-pack"
+vscode "ms-vscode.cpptools-themes"
 vscode "ms-vscode.makefile-tools"
 vscode "ms-vscode.vscode-typescript-next"
 vscode "ms-vsliveshare.vsliveshare"
@@ -283,6 +293,7 @@ vscode "stylelint.vscode-stylelint"
 vscode "taichi.vscode-textlint"
 vscode "teabyii.ayu"
 vscode "toba.vsfire"
+vscode "twxs.cmake"
 vscode "wix.vscode-import-cost"
 vscode "xabikos.javascriptsnippets"
 vscode "yamatsum.vscode-nonicons"

@@ -4,8 +4,8 @@ experimental = true
 [tools]
 node = "latest"
 go = ['1.21', '1.18']
-watchexec = 'latest'
 rust = "latest"
+watchexec = 'latest'
 python = "latest"
 deno = "latest"
 bun = "latest"

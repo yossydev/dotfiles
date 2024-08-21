@@ -55,32 +55,25 @@ local sources = {
 	null_ls.builtins.diagnostics.fish,
 }
 
-if not use_deno then
-	table.insert(
-		sources,
-		require("none-ls.diagnostics.eslint").with({
-			extra_args = function(params)
-				local file_types = {
-					"eslint.config.js",
-					"eslint.config.mjs",
-					".eslintrc.js",
-					".eslintrc.cjs",
-					".eslintrc.yaml",
-					".eslintrc.yml",
-					".eslintrc.json",
-					".eslintrc",
-				}
-				for _, file_type in ipairs(file_types) do
-					local config_path = params.root .. "/" .. file_type
-					if file_exists(config_path) then
-						return { "--config", config_path }
-					end
-				end
-				return {}
-			end,
-			diagnostics_format = "[eslint] #{m}\n(#{c})",
-		})
-	)
+local function eslint_config_exists()
+	local eslint_config_files = {
+		".eslintrc.js",
+		".eslintrc.cjs",
+		".eslintrc.yaml",
+		".eslintrc.yml",
+		".eslintrc.json",
+		".eslintrc",
+	}
+	for _, config_file in ipairs(eslint_config_files) do
+		if file_exists(config_file) then
+			return true
+		end
+	end
+	return false
+end
+
+if not use_deno and eslint_config_exists() then
+	table.insert(sources, null_ls.builtins.diagnostics.eslint)
 end
 
 setup_null_ls(sources)

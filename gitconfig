@@ -3,7 +3,7 @@
   email = codeyy021@gmail.com
 
 [color]
-	ui = auto
+	ui = true
 
 [pager]
   diff = delta

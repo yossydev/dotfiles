@@ -24,8 +24,8 @@ config.initial_rows = 60
 -- disable ligatures: https://wezfurlong.org/wezterm/config/font-shaping.html#advanced-font-shaping-options
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
--- Fonts used: https://github.com/yuru7/moralerspace/releases
-config.font = wezterm.font("Moralerspace Radon NF", {
+-- Fonts used: https://github.com/microsoft/cascadia-code?tab=readme-ov-file
+config.font = wezterm.font("Cascadia Next JP", {
 	weight = "Regular",
 	stretch = "Normal",
 	style = "Normal",

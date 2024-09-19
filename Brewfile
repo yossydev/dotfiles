@@ -16,8 +16,6 @@ brew "act"
 brew "aws-amplify"
 # CLI tool to build, test, debug, and deploy Serverless applications using AWS SAM
 brew "aws-sam-cli"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.11"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # GNU internationalization (i18n) and localization (l10n) library
@@ -118,6 +116,8 @@ brew "prettierd"
 brew "pyenv"
 # Static type checker for Python
 brew "pyright"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.11"
 # Tool Command Language
 brew "tcl-tk"
 # Interpreted, interactive, object-oriented programming language
@@ -144,6 +144,8 @@ brew "terraform", link: false
 brew "tfenv"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Language for application scale JavaScript development
+brew "typescript"
 # Language Server Protocol implementation for TypeScript wrapping tsserver
 brew "typescript-language-server"
 # Maintained ctags implementation

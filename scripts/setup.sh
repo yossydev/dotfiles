@@ -18,7 +18,7 @@ echo "Copying starship.toml to ~/.config..."
 cp starship.toml "${HOME}/.config/starship.toml"
 
 echo "Copying nvim directory to ~/.config..."
-cp global_git_ignore "${HOME}/.config/git/"
+cp gitignore_global "${HOME}/.config/git/"
 
 echo "Copying mise directory to ~/.config..."
 cp -r mise "${HOME}/.config/"

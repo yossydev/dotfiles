@@ -3,11 +3,14 @@ experimental = true
 
 [tools]
 node = "latest"
-go = ['1.21', '1.18']
 watchexec = 'latest'
 python = "latest"
 deno = "latest"
 bun = "latest"
-cargo = "latest"
+"cargo:cargo-binstall" = "latest"
+"cargo:cargo-update" = "latest"
 "cargo:eza" = "latest"
+"cargo:fd-find" = "latest"
+"cargo:ripgrep" = "latest"
 rust = "latest"
+go = "latest"

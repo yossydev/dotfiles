@@ -116,9 +116,6 @@ export PATH="$PATH:`pwd`/flutter/bin"
 # Flutter Version Management
 export PATH="$PATH:$HOME/.pub-cache/bin"
 
-# gh
-eval "$(gh completion -s zsh)"
-
 # go
 export PATH="$HOME/go/bin:$PATH"
 
@@ -129,7 +126,6 @@ export PATH="$HOME/go/bin:$PATH"
 # direnv
 eval "$(direnv hook zsh)"
 
-
 [[ -f "$HOME/fig-export/dotfiles/dotfile.zsh" ]] && builtin source "$HOME/fig-export/dotfiles/dotfile.zsh"
 
 export PATH="$HOME/.moon/bin:$PATH"
@@ -137,5 +133,5 @@ export PATH="$HOME/.moon/bin:$PATH"
 # v8
 export PATH="$HOME/Desktop/OSS/depot_tools:$PATH"
 
-# Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
+# mise
+eval "$(~/.local/bin/mise activate zsh)"

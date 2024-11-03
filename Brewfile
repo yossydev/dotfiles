@@ -2,16 +2,24 @@ tap "aws/tap"
 tap "dart-lang/dart"
 tap "fsouza/prettierd"
 tap "homebrew/bundle"
-tap "homebrew/cask-versions"
 tap "homebrew/services"
 tap "lencx/chatgpt", "https://github.com/lencx/ChatGPT.git"
 tap "leoafarias/fvm"
+tap "oven-sh/bun"
 tap "qovery/qovery-cli"
 tap "ruiokazaki/gpt-naming"
 tap "universal-ctags/universal-ctags"
 tap "wez/wezterm"
 # Run your GitHub Actions locally
 brew "act"
+# Automatic configure script builder
+brew "autoconf"
+# Collection of over 500 reusable autoconf macros
+brew "autoconf-archive"
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
+# Platform built on V8 to build network applications
+brew "node", link: false
 # Build full-stack web and mobile apps in hours. Easy to start, easy to scale
 brew "aws-amplify"
 # CLI tool to build, test, debug, and deploy Serverless applications using AWS SAM
@@ -30,14 +38,14 @@ brew "bazel"
 brew "grpc"
 # Generate compilation database for clang tooling
 brew "bear"
+# Object-file caching compiler wrapper
+brew "ccache"
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
 # Cloudflare Tunnel client (formerly Argo Tunnel)
 brew "cloudflared"
 # Cross-platform make
 brew "cmake"
-# Package acting as bridge between Node projects and their package managers
-brew "corepack", link: false
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
 # Load/unload environment variables based on $PWD
@@ -46,8 +54,12 @@ brew "direnv"
 brew "docker", link: false
 # Text processing system for reStructuredText
 brew "docutils"
+# Cross-platform C++ GUI toolkit
+brew "wxwidgets"
 # AST-based pattern checker for JavaScript
 brew "eslint"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
 # Firebase command-line tools
 brew "firebase-cli"
 # Command-line tools for fly.io services
@@ -92,6 +104,8 @@ brew "mkcert"
 brew "zlib"
 # Open source relational database management system
 brew "mysql"
+# Netwide Assembler (NASM) is an 80x86 assembler
+brew "nasm"
 # Parser generator tool and incremental parsing library
 brew "tree-sitter"
 # Ambitious Vim-fork focused on extensibility and agility
@@ -104,8 +118,10 @@ brew "nss"
 brew "openconnect"
 # Development kit for the Java programming language
 brew "openjdk@11"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@1.1"
+# Execute binaries from Python packages in isolated environments
+brew "pipx"
+# Manage compile and link flags for libraries
+brew "pkg-config"
 # Quick and easy command-line file transfer utility from any computer to another
 brew "portal"
 # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
@@ -118,18 +134,14 @@ brew "pyenv"
 brew "pyright"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
-# Tool Command Language
-brew "tcl-tk"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.8"
-# CLI tool that randomly returns words that can be used for code review approve
-brew "rando_lgtm"
 # Install various Ruby versions and implementations
 brew "ruby-build"
 # Ruby version manager
 brew "rbenv"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Safe, concurrent, practical language
+brew "rust"
 # Rust toolchain installer
 brew "rustup"
 # Cross-shell prompt for astronauts
@@ -138,6 +150,8 @@ brew "starship"
 brew "stylua"
 # LSP for TailwindCSS
 brew "tailwindcss-language-server"
+# Tool Command Language
+brew "tcl-tk"
 # Tool to build, change, and version infrastructure
 brew "terraform", link: false
 # Terraform version manager inspired by rbenv
@@ -152,18 +166,22 @@ brew "typescript-language-server"
 brew "universal-ctags", args: ["HEAD"]
 # Command-line interface for Vercel
 brew "vercel-cli"
+# Tool for creating isolated virtual python environments
+brew "virtualenv"
 # Your favorite rust -> wasm workflow tool!
 brew "wasm-pack"
-# Cross-platform C++ GUI toolkit
-brew "wxwidgets"
 # Refactoring tool for Erlang with emacs and Eclipse integration
 brew "wrangler"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # Simple cli to manage Flutter SDK versions per project
 brew "leoafarias/fvm/fvm"
+# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
+brew "oven-sh/bun/bun"
 # Deploy modern application in seconds
 brew "qovery/qovery-cli/qovery-cli"
+# AI-powered productivity tool for the command-line
+cask "amazon-q"
 # Tools for the Android SDK
 cask "android-sdk"
 # Tools for building Android applications
@@ -176,10 +194,10 @@ cask "blackhole-2ch"
 cask "brave-browser"
 # Browser for SQLite databases
 cask "db-browser-for-sqlite"
+# Trains AIs to understand and translate texts
+cask "deepl"
 # Voice and text chat software
 cask "discord"
-# App to build and share containerised applications and microservices
-cask "docker"
 # Reimagine your terminal
 cask "fig"
 # Web browser
@@ -188,8 +206,6 @@ cask "firefox"
 cask "flutter"
 # Desktop client for GitHub repositories
 cask "github"
-# Web browser
-cask "google-chrome"
 # Set of tools to manage resources and applications hosted on Google Cloud
 cask "google-cloud-sdk"
 # Open-source keystroke visualiser
@@ -216,8 +232,6 @@ cask "raycast"
 cask "session-manager-plugin"
 # Digital design and prototyping platform
 cask "sketch"
-# Team communication and collaboration software
-cask "slack"
 # Move and resize windows with ease
 cask "spectacle"
 # Music streaming service

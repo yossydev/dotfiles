@@ -1,5 +1,6 @@
 tap "aws/tap"
 tap "dart-lang/dart"
+tap "fastly/tap"
 tap "fsouza/prettierd"
 tap "homebrew/bundle"
 tap "homebrew/services"
@@ -8,6 +9,7 @@ tap "leoafarias/fvm"
 tap "oven-sh/bun"
 tap "qovery/qovery-cli"
 tap "ruiokazaki/gpt-naming"
+tap "supabase/tap"
 tap "universal-ctags/universal-ctags"
 tap "wez/wezterm"
 # Run your GitHub Actions locally
@@ -46,12 +48,14 @@ brew "clang-format"
 brew "cloudflared"
 # Cross-platform make
 brew "cmake"
+# Dependency manager for Cocoa projects
+brew "cocoapods"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
 # Load/unload environment variables based on $PWD
 brew "direnv"
 # Pack, ship and run any application as a lightweight container
-brew "docker", link: false
+brew "docker"
 # Text processing system for reStructuredText
 brew "docutils"
 # Cross-platform C++ GUI toolkit
@@ -94,6 +98,8 @@ brew "luajit"
 brew "luv"
 # Easily convert Marp Markdown files into static HTML/CSS, PDF, PPT and images
 brew "marp-cli"
+# Mac App Store command-line interface
+brew "mas"
 # Ultra relevant, instant and typo-tolerant full-text search API
 brew "meilisearch"
 # Polyglot runtime manager (asdf rust clone)
@@ -120,8 +126,8 @@ brew "openconnect"
 brew "openjdk@11"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
-# Manage compile and link flags for libraries
-brew "pkg-config"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
 # Quick and easy command-line file transfer utility from any computer to another
 brew "portal"
 # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
@@ -140,8 +146,6 @@ brew "ruby-build"
 brew "rbenv"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Safe, concurrent, practical language
-brew "rust"
 # Rust toolchain installer
 brew "rustup"
 # Cross-shell prompt for astronauts
@@ -174,12 +178,16 @@ brew "wasm-pack"
 brew "wrangler"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
+# A CLI for interacting with the Fastly platform
+brew "fastly/tap/fastly"
 # Simple cli to manage Flutter SDK versions per project
 brew "leoafarias/fvm/fvm"
 # Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
 brew "oven-sh/bun/bun"
 # Deploy modern application in seconds
 brew "qovery/qovery-cli/qovery-cli"
+# Supabase CLI
+brew "supabase/tap/supabase"
 # AI-powered productivity tool for the command-line
 cask "amazon-q"
 # Tools for the Android SDK
@@ -192,12 +200,16 @@ cask "authy"
 cask "blackhole-2ch"
 # Web browser focusing on privacy
 cask "brave-browser"
+# OpenAI's official ChatGPT desktop app
+cask "chatgpt"
 # Browser for SQLite databases
 cask "db-browser-for-sqlite"
 # Trains AIs to understand and translate texts
 cask "deepl"
 # Voice and text chat software
 cask "discord"
+# App to build and share containerised applications and microservices
+cask "docker"
 # Reimagine your terminal
 cask "fig"
 # Web browser
@@ -210,12 +222,18 @@ cask "github"
 cask "google-cloud-sdk"
 # Open-source keystroke visualiser
 cask "keycastr"
+# Shows the next meeting in the menu bar
+cask "meetingbar"
+# Provides updates to various Microsoft products
+cask "microsoft-auto-update"
+# Multi-platform web browser
+cask "microsoft-edge"
+# Meet, chat, call, and collaborate in just one place
+cask "microsoft-teams"
 # Online collaborative whiteboard platform
 cask "miro"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
-# App to write, plan, collaborate, and get organised
-cask "notion"
 # Calendar for professionals and teams
 cask "notion-calendar"
 # Open-source software for live streaming and screen recording
@@ -236,6 +254,8 @@ cask "sketch"
 cask "spectacle"
 # Music streaming service
 cask "spotify"
+# System monitor for the menu bar
+cask "stats"
 # Editor for designing and documenting APIs
 cask "stoplight-studio"
 # Native GUI tool for relational databases
@@ -252,64 +272,33 @@ cask "wrike"
 cask "xbar"
 # Desktop client for the Zulip team chat platform
 cask "zulip"
+mas "Bear", id: 1091189122
+mas "iMovie", id: 408981434
+mas "LINE", id: 539883307
+mas "Xcode", id: 497799835
 vscode "amazonwebservices.codewhisperer-for-command-line-companion"
-vscode "astro-build.astro-vscode"
 vscode "asvetliakov.vscode-neovim"
 vscode "biomejs.biome"
-vscode "bradlc.vscode-tailwindcss"
-vscode "clinyong.vscode-css-modules"
-vscode "csstools.postcss"
 vscode "dbaeumer.vscode-eslint"
-vscode "denoland.vscode-deno"
 vscode "donjayamanne.githistory"
-vscode "dprint.dprint"
 vscode "dsznajder.es7-react-js-snippets"
 vscode "eamodio.gitlens"
 vscode "ecmel.vscode-html-css"
 vscode "esbenp.prettier-vscode"
-vscode "file-icons.file-icons"
-vscode "firsttris.vscode-jest-runner"
 vscode "formulahendry.auto-close-tag"
-vscode "github.copilot"
-vscode "github.copilot-chat"
 vscode "github.github-vscode-theme"
-vscode "github.vscode-github-actions"
-vscode "golang.go"
-vscode "graphql.vscode-graphql"
-vscode "graphql.vscode-graphql-syntax"
-vscode "gruntfuggly.todo-tree"
-vscode "harryhopkinson.vim-theme"
-vscode "jonkwheeler.styled-components-snippets"
+vscode "llvm-vs-code-extensions.vscode-clangd"
 vscode "lokalise.i18n-ally"
-vscode "miguelsolorio.fluent-icons"
-vscode "moonbit.moonbit-lang"
-vscode "mosapride.zenkaku"
-vscode "mquandalle.graphql"
-vscode "ms-azuretools.vscode-docker"
 vscode "ms-ceintl.vscode-language-pack-ja"
-vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode.cmake-tools"
 vscode "ms-vscode.cpptools"
 vscode "ms-vscode.cpptools-extension-pack"
 vscode "ms-vscode.cpptools-themes"
-vscode "ms-vscode.makefile-tools"
 vscode "ms-vscode.vscode-typescript-next"
 vscode "ms-vsliveshare.vsliveshare"
-vscode "prisma.prisma"
-vscode "ritwickdey.liveserver"
-vscode "rome.rome"
-vscode "rust-lang.rust-analyzer"
-vscode "serayuzgur.crates"
-vscode "shardulm94.trailing-spaces"
-vscode "steoates.autoimport"
-vscode "stoplight.spectral"
-vscode "streetsidesoftware.code-spell-checker"
-vscode "styled-components.vscode-styled-components"
-vscode "stylelint.vscode-stylelint"
-vscode "taichi.vscode-textlint"
-vscode "teabyii.ayu"
-vscode "toba.vsfire"
+vscode "npclaudiu.vscode-gn"
+vscode "simonsiefke.svg-preview"
 vscode "twxs.cmake"
-vscode "wix.vscode-import-cost"
+vscode "v8-torque.vscode-torque"
 vscode "xabikos.javascriptsnippets"
-vscode "yamatsum.vscode-nonicons"
+vscode "xaver.clang-format"

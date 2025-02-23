@@ -133,11 +133,12 @@ export PATH="$HOME/.moon/bin:$PATH"
 
 # v8
 export PATH="$HOME/Desktop/OSS/depot_tools:$PATH"
+alias gm="$HOME/Desktop/oss/v8/v8/tools/dev/gm.py"
 
 # mise
 eval "$(~/.local/bin/mise activate zsh)"
 
+export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk
+
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
-
-export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk

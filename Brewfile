@@ -2,8 +2,6 @@ tap "aws/tap"
 tap "dart-lang/dart"
 tap "fastly/tap"
 tap "fsouza/prettierd"
-tap "homebrew/bundle"
-tap "homebrew/services"
 tap "lencx/chatgpt", "https://github.com/lencx/ChatGPT.git"
 tap "leoafarias/fvm"
 tap "oven-sh/bun"
@@ -190,12 +188,8 @@ brew "qovery/qovery-cli/qovery-cli"
 brew "supabase/tap/supabase"
 # AI-powered productivity tool for the command-line
 cask "amazon-q"
-# Tools for the Android SDK
-cask "android-sdk"
 # Tools for building Android applications
 cask "android-studio"
-# Two-factor authentication software
-cask "authy"
 # Virtual Audio Driver
 cask "blackhole-2ch"
 # Web browser focusing on privacy
@@ -208,8 +202,6 @@ cask "db-browser-for-sqlite"
 cask "deepl"
 # Voice and text chat software
 cask "discord"
-# App to build and share containerised applications and microservices
-cask "docker"
 # Reimagine your terminal
 cask "fig"
 # Web browser
@@ -250,8 +242,6 @@ cask "raycast"
 cask "session-manager-plugin"
 # Digital design and prototyping platform
 cask "sketch"
-# Move and resize windows with ease
-cask "spectacle"
 # Music streaming service
 cask "spotify"
 # System monitor for the menu bar

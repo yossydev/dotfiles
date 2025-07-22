@@ -1,5 +1,6 @@
 [settings]
 experimental = true
+idiomatic_version_file_enable_tools = ["node"]
 
 [tools]
 watchexec = 'latest'
@@ -10,6 +11,6 @@ deno = "latest"
 "cargo:fd-find" = "latest"
 "cargo:ripgrep" = "latest"
 go = "latest"
-node = "20.18.0"
+node = "20"
 "cargo:eza" = "latest"
 rust = "latest"

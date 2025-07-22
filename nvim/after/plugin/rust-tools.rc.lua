@@ -1,4 +1,5 @@
-local rt = require("rust-tools")
+local status, rt = pcall(require, "rust-tools")
+if (not status) then return end
 
 local function on_attach(client, buffer)
 	-- This callback is called when the LSP is atttached/enabled for this buffer

@@ -2,6 +2,7 @@ tap "aws/tap"
 tap "dart-lang/dart"
 tap "fastly/tap"
 tap "fsouza/prettierd"
+tap "grishka/grishka"
 tap "lencx/chatgpt", "https://github.com/lencx/ChatGPT.git"
 tap "leoafarias/fvm"
 tap "oven-sh/bun"
@@ -18,8 +19,6 @@ brew "autoconf"
 brew "autoconf-archive"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
-# Platform built on V8 to build network applications
-brew "node", link: false
 # Build full-stack web and mobile apps in hours. Easy to start, easy to scale
 brew "aws-amplify"
 # CLI tool to build, test, debug, and deploy Serverless applications using AWS SAM
@@ -122,12 +121,16 @@ brew "nss"
 brew "openconnect"
 # Development kit for the Java programming language
 brew "openjdk@11"
+# Development kit for the Java programming language
+brew "openjdk@17"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # Quick and easy command-line file transfer utility from any computer to another
 brew "portal"
+# Object-relational database system
+brew "postgresql@14"
 # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
 brew "prettier"
 # Prettier daemon
@@ -196,24 +199,32 @@ cask "blackhole-2ch"
 cask "brave-browser"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
+# Anthropic's official Claude AI desktop app
+cask "claude"
+# Write, edit, and chat about your code with AI
+cask "cursor"
 # Browser for SQLite databases
 cask "db-browser-for-sqlite"
-# Trains AIs to understand and translate texts
-cask "deepl"
 # Voice and text chat software
 cask "discord"
+# Matrix collaboration client
+cask "element"
 # Reimagine your terminal
 cask "fig"
+# Collaborative team software
+cask "figma"
 # Web browser
 cask "firefox"
 # UI toolkit for building applications for mobile, web and desktop
 cask "flutter"
+# Set of tools to manage resources and applications hosted on Google Cloud
+cask "gcloud-cli"
 # Desktop client for GitHub repositories
 cask "github"
-# Set of tools to manage resources and applications hosted on Google Cloud
-cask "google-cloud-sdk"
 # Open-source keystroke visualiser
 cask "keycastr"
+# Agent-centric IDE with spec-driven development
+cask "kiro"
 # Shows the next meeting in the menu bar
 cask "meetingbar"
 # Provides updates to various Microsoft products
@@ -224,8 +235,12 @@ cask "microsoft-edge"
 cask "microsoft-teams"
 # Online collaborative whiteboard platform
 cask "miro"
+# Unofficial Google Nearby Share app
+cask "neardrop"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
+# App to write, plan, collaborate, and get organised
+cask "notion"
 # Calendar for professionals and teams
 cask "notion-calendar"
 # Open-source software for live streaming and screen recording
@@ -238,6 +253,8 @@ cask "pritunl"
 cask "raindropio"
 # Control your tools with a few keystrokes
 cask "raycast"
+# Move and resize windows using keyboard shortcuts or snap areas
+cask "rectangle"
 # Plugin for AWS CLI to start and end sessions that connect to managed instances
 cask "session-manager-plugin"
 # Digital design and prototyping platform
@@ -267,7 +284,7 @@ cask "zulip"
 mas "Bear", id: 1091189122
 mas "iMovie", id: 408981434
 mas "LINE", id: 539883307
-mas "Xcode", id: 497799835
+mas "RunCat", id: 1429033973
 vscode "amazonwebservices.codewhisperer-for-command-line-companion"
 vscode "asvetliakov.vscode-neovim"
 vscode "biomejs.biome"
@@ -296,5 +313,6 @@ vscode "simonsiefke.svg-preview"
 vscode "twxs.cmake"
 vscode "v8-torque.vscode-torque"
 vscode "vadimcn.vscode-lldb"
+vscode "withfig.fig"
 vscode "xabikos.javascriptsnippets"
 vscode "xaver.clang-format"

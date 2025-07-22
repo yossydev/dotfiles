@@ -140,5 +140,13 @@ eval "$(~/.local/bin/mise activate zsh)"
 
 export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk
 
+export GIT_EDITOR=vim
+
+export OPENAI_API_KEY="your-api-key-here"
+
+export JAVA_HOME=/opt/homebrew/opt/openjdk@17
+
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
+
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"

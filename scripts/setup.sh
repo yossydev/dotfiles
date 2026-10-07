@@ -51,4 +51,9 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 echo "Installing packages from Brewfile..."
 brew bundle --file=./Brewfile
 
+echo "Installing tools with mise..."
+mise trust mise/config.toml
+mise trust "${HOME}/.config/mise/config.toml"
+mise install
+
 echo "Installation complete!"

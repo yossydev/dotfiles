@@ -26,6 +26,10 @@ cp -i "${HOME}/.config/starship.toml" starship.toml
 echo "Copying mise from ~/.config..."
 cp -r "${HOME}/.config/mise/." mise
 
+echo "Installing tools with mise..."
+mise trust mise/config.toml
+mise install
+
 # ~/.codex/config.toml is mostly generated project state. The repo copy is the portable subset.
 # Do not copy ~/.npmrc or ~/.cursor/mcp.json; they contain tokens.
 echo "Copying app configs..."

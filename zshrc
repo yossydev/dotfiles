@@ -78,16 +78,14 @@ alias nrd="npm run dev"
 alias nrb="npm run build"
 alias nrs="npm run start"
 
+# mise
+eval "$(mise activate zsh)"
+
 # zoxide
 eval "$(zoxide init zsh)"
 
 # gitmoji
 alias gmoji="gitmoji -c"
-
-# bun
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
 
 # StarShip
 eval "$(starship init zsh)"
@@ -98,11 +96,6 @@ if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/
 # The next line enables shell command completion for gcloud.
 if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
 
-# python
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="$HOME/.rd/bin:$PATH"
 
@@ -112,10 +105,6 @@ alias v='nvim'
 # android
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
-
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Flutter
 export PATH="$PATH:`pwd`/flutter/bin"
@@ -140,9 +129,6 @@ export PATH="$HOME/.moon/bin:$PATH"
 # v8
 export PATH="$HOME/Desktop/OSS/depot_tools:$PATH"
 alias gm="$HOME/Desktop/oss/v8/v8/tools/dev/gm.py"
-
-# mise
-eval "$(mise activate zsh)"
 
 export GIT_EDITOR=vim
 

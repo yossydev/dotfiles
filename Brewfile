@@ -2,50 +2,40 @@ tap "aws/tap"
 tap "dart-lang/dart"
 tap "entireio/tap"
 tap "fastly/tap"
-tap "fsouza/prettierd"
 tap "grishka/grishka"
 tap "lencx/chatgpt", "https://github.com/lencx/ChatGPT.git"
 tap "leoafarias/fvm"
 tap "ngrok/ngrok"
 tap "null-dev/firefox-profile-switcher"
-tap "oven-sh/bun"
 tap "qovery/qovery-cli"
 tap "ruiokazaki-archive/gpt-naming", "https://github.com/ruiokazaki-archive/homebrew-gpt-naming.git"
 tap "supabase/tap"
 tap "universal-ctags/universal-ctags"
 tap "wezterm/wezterm", "https://github.com/wezterm/homebrew-wezterm.git"
-# Run your GitHub Actions locally
-brew "act"
 # Automatic configure script builder
 brew "autoconf"
 # Collection of over 500 reusable autoconf macros
 brew "autoconf-archive"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
-# Build full-stack web and mobile apps in hours. Easy to start, easy to scale
-brew "aws-amplify"
-# CLI tool to build, test, debug, and deploy Serverless applications using AWS SAM
-brew "aws-sam-cli"
-# Official Amazon AWS command-line interface
-brew "awscli"
 # GNU internationalization (i18n) and localization (l10n) library
 brew "gettext"
 # Core application library for C
 brew "glib"
 # OpenType text shaping engine
 brew "harfbuzz"
-# Google's own build tool
-brew "bazel"
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
 # Generate compilation database for clang tooling
 brew "bear"
+# GNU grep, egrep and fgrep
+brew "grep"
 # Object-file caching compiler wrapper
 brew "ccache"
 # Filter to replace numeric timestamps with a formatted date time
 brew "cf", link: false
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
-# Cloudflare Tunnel client (formerly Argo Tunnel)
-brew "cloudflared"
 # Official command-line client for Cloud Foundry
 brew "cloudfoundry-cli"
 # Cross-platform make
@@ -54,72 +44,48 @@ brew "cmake"
 brew "cocoapods"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
-# Load/unload environment variables based on $PWD
-brew "direnv"
 # Pack, ship and run any application as a lightweight container
 brew "docker", link: false
 # Text processing system for reStructuredText
 brew "docutils"
-# AST-based pattern checker for JavaScript
-brew "eslint"
 # Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
+# Flutter version manager
+brew "fvm"
 # Firebase command-line tools
 brew "firebase-cli"
-# Command-line tools for fly.io services
-brew "flyctl"
-# GNU compiler collection
-brew "gcc"
-# GitHub command-line tool
-brew "gh"
-# Distributed revision control system
-brew "git"
-# Syntax-highlighting pager for git and diff output
-brew "git-delta"
-# Interactive command-line tool for using emoji in commit messages
-brew "gitmoji"
-# Open source programming language to build simple/reliable/efficient software
-brew "go"
-# Next generation open source RPC library and framework
-brew "grpc"
 # Add GitHub support to git on the command-line
 brew "hub"
 # Command-line benchmarking tool
 brew "hyperfine"
+# GNU compiler collection
+brew "gcc"
+# Distributed revision control system
+brew "git"
+# Next generation open source RPC library and framework
+brew "grpc"
 # Install and debug iPhone apps from the command-line
 brew "ios-deploy"
-# Lightweight and flexible command-line JSON processor
-brew "jq"
 # Provides library functionality for FIDO U2F & FIDO 2.0, including USB
 brew "libfido2"
 # Next-gen compiler infrastructure
 brew "llvm"
 # LLVM Project Linker
 brew "lld"
-# Language Server for the Lua language
-brew "lua-language-server"
 # Just-In-Time Compiler (JIT) for the Lua programming language
 brew "luajit"
 # Bare libuv bindings for lua
 brew "luv"
-# Easily convert Marp Markdown files into static HTML/CSS, PDF, PPT and images
-brew "marp-cli"
 # Mac App Store command-line interface
 brew "mas"
 # Ultra relevant, instant and typo-tolerant full-text search API
 brew "meilisearch"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
-# Simple tool to make locally trusted development certificates
-brew "mkcert"
 # Open source relational database management system
 brew "mysql"
 # Netwide Assembler (NASM) is an 80x86 assembler
 brew "nasm"
-# Incremental parsing library
-brew "tree-sitter"
-# Ambitious Vim-fork focused on extensibility and agility
-brew "neovim"
 # HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
 brew "nginx"
 # Small build system for use with gyp or CMake
@@ -134,8 +100,6 @@ brew "openconnect"
 brew "openjdk@11"
 # Development kit for the Java programming language
 brew "openjdk@17"
-# Execute binaries from Python packages in isolated environments
-brew "pipx"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # Quick and easy command-line file transfer utility from any computer to another
@@ -144,62 +108,22 @@ brew "portal"
 brew "postgresql@14"
 # Object-relational database system
 brew "postgresql@15"
-# Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
-brew "prettier"
-# Prettier daemon
-brew "prettierd"
-# Python version management
-brew "pyenv"
-# Static type checker for Python
-brew "pyright"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.11"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.12"
-# Install various Ruby versions and implementations
-brew "ruby-build"
-# Ruby version manager
-brew "rbenv"
-# Search tool like grep and The Silver Searcher
-brew "ripgrep"
-# Rust toolchain installer
-brew "rustup"
-# Cross-shell prompt for astronauts
-brew "starship"
-# Opinionated Lua code formatter
-brew "stylua"
-# LSP for TailwindCSS
-brew "tailwindcss-language-server"
 # Tool Command Language
 brew "tcl-tk"
-# Tool to build, change, and version infrastructure
-brew "terraform"
-# Terraform version manager inspired by rbenv
-brew "tfenv", link: false
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
-# Language for application scale JavaScript development
-brew "typescript"
-# Language Server Protocol implementation for TypeScript wrapping tsserver
-brew "typescript-language-server"
 # Maintained ctags implementation
 brew "universal-ctags"
-# Extremely fast Python package installer and resolver, written in Rust
-brew "uv"
-# Command-line interface for Vercel
-brew "vercel"
-# Tool for creating isolated virtual python environments
-brew "virtualenv"
-# Your favorite rust -> wasm workflow tool!
-brew "wasm-pack"
-# Refactoring tool for Erlang with emacs and Eclipse integration
-brew "wrangler"
 # Cross-platform C++ GUI toolkit
 brew "wxwidgets"
 # General-purpose lossless data-compression library
 brew "zlib"
-# Shell extension to navigate your filesystem faster
-brew "zoxide"
+# JS runtime written in Rust
+cargo "andromeda", source: "https://github.com/tryandromeda/andromeda"
+# Agent SDK used outside a single project
+npm "@anthropic-ai/claude-agent-sdk"
+# eshost cannot be installed by mise without weakening npm trust checks
+npm "eshost-cli"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Tools for building Android applications
@@ -212,10 +136,6 @@ cask "brave-browser"
 cask "chatgpt"
 # Anthropic's official Claude AI desktop app
 cask "claude"
-# Terminal-based AI coding assistant
-cask "claude-code"
-# OpenAI's coding agent that runs in your terminal
-cask "codex"
 # Write, edit, and chat about your code with AI
 cask "cursor"
 # Browser for SQLite databases
@@ -371,17 +291,3 @@ vscode "vadimcn.vscode-lldb"
 vscode "vscodevim.vim"
 vscode "xabikos.javascriptsnippets"
 vscode "xaver.clang-format"
-go "cmd/go"
-go "cmd/gofmt"
-cargo "andromeda", source: "https://github.com/tryandromeda/andromeda"
-npm "@anthropic-ai/claude-agent-sdk"
-npm "@anthropic-ai/claude-code"
-npm "@openai/codex"
-npm "cf"
-npm "difit"
-npm "eshost-cli"
-npm "firebase-tools"
-npm "jsvu"
-npm "o3-search-mcp"
-npm "opencode-ai"
-npm "pnpm"

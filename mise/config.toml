@@ -1,18 +1,66 @@
 [settings]
 experimental = true
-idiomatic_version_file_enable_tools = ["node"]
+idiomatic_version_file_enable_tools = ["node", "python", "ruby"]
 
 [tools]
-watchexec = 'latest'
+# Runtimes. Java stays on Android Studio's JDK.
+node = "22"
 python = "latest"
+ruby = "latest"
+go = "1.27"
+rust = "latest"
+bun = "latest"
 deno = "latest"
+pnpm = "latest"
+
+# Tools previously installed with Homebrew.
+act = "latest"
+aws-amplify = "latest"
+aws-sam-cli = "latest"
+awscli = "latest"
+bazel = "latest"
+cloudflared = "latest"
+delta = "latest"
+direnv = "latest"
+eza = "latest"
+fd = "latest"
+flyctl = "latest"
+gh = "latest"
+jq = "latest"
+lua-language-server = "latest"
+marp-cli = "latest"
+mkcert = "latest"
+neovim = "latest"
+pipx = "latest"
+prettier = "latest"
+ripgrep = "latest"
+starship = "latest"
+stylua = "latest"
+terraform = "1.5"
+tree-sitter = "latest"
+uv = "latest"
+vercel = "latest"
+watchexec = "latest"
+wrangler = "latest"
+zoxide = "latest"
+claude-code = "latest"
+codex = "latest"
+
+# npm CLIs previously installed globally.
+"npm:@fsouza/prettierd" = "latest"
+"npm:@tailwindcss/language-server" = "latest"
+"npm:cf" = "latest"
+"npm:difit" = "latest"
+"npm:eslint" = "latest"
+"npm:gitmoji-cli" = "latest"
+"npm:jsvu" = "latest"
+"npm:o3-search-mcp" = { version = "latest", allow_low_downloads = true }
+"npm:opencode-ai" = "latest"
+"npm:pyright" = "latest"
+"npm:typescript" = "latest"
+"npm:typescript-language-server" = "latest"
+
+# Cargo CLIs.
 "cargo:cargo-binstall" = "latest"
 "cargo:cargo-update" = "latest"
-"cargo:fd-find" = "latest"
-"cargo:ripgrep" = "latest"
-go = "latest"
-node = "22"
-"cargo:eza" = "latest"
-rust = "latest"
-pnpm = "latest"
-"npm:@openai/codex" = "latest"
+"cargo:wasm-pack" = "latest"

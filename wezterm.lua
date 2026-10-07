@@ -63,6 +63,11 @@ config.keys = {
 		mods = "CMD",
 		action = wezterm.action.SpawnTab("CurrentPaneDomain"),
 	},
+	{
+		key = "Enter",
+		mods = "SHIFT",
+		action = wezterm.action.SendString("\n"),
+	},
 	-- タブを閉じる
 	{
 		key = "w",

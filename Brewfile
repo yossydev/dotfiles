@@ -1,16 +1,19 @@
 tap "aws/tap"
 tap "dart-lang/dart"
+tap "entireio/tap"
 tap "fastly/tap"
 tap "fsouza/prettierd"
 tap "grishka/grishka"
 tap "lencx/chatgpt", "https://github.com/lencx/ChatGPT.git"
 tap "leoafarias/fvm"
+tap "ngrok/ngrok"
+tap "null-dev/firefox-profile-switcher"
 tap "oven-sh/bun"
 tap "qovery/qovery-cli"
-tap "ruiokazaki/gpt-naming"
+tap "ruiokazaki-archive/gpt-naming", "https://github.com/ruiokazaki-archive/homebrew-gpt-naming.git"
 tap "supabase/tap"
 tap "universal-ctags/universal-ctags"
-tap "wez/wezterm"
+tap "wezterm/wezterm", "https://github.com/wezterm/homebrew-wezterm.git"
 # Run your GitHub Actions locally
 brew "act"
 # Automatic configure script builder
@@ -33,16 +36,18 @@ brew "glib"
 brew "harfbuzz"
 # Google's own build tool
 brew "bazel"
-# Next generation open source RPC library and framework
-brew "grpc"
 # Generate compilation database for clang tooling
 brew "bear"
 # Object-file caching compiler wrapper
 brew "ccache"
+# Filter to replace numeric timestamps with a formatted date time
+brew "cf", link: false
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
 # Cloudflare Tunnel client (formerly Argo Tunnel)
 brew "cloudflared"
+# Official command-line client for Cloud Foundry
+brew "cloudfoundry-cli"
 # Cross-platform make
 brew "cmake"
 # Dependency manager for Cocoa projects
@@ -52,14 +57,12 @@ brew "curl"
 # Load/unload environment variables based on $PWD
 brew "direnv"
 # Pack, ship and run any application as a lightweight container
-brew "docker"
+brew "docker", link: false
 # Text processing system for reStructuredText
 brew "docutils"
-# Cross-platform C++ GUI toolkit
-brew "wxwidgets"
 # AST-based pattern checker for JavaScript
 brew "eslint"
-# Play, record, convert, and stream audio and video
+# Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
 # Firebase command-line tools
 brew "firebase-cli"
@@ -75,6 +78,10 @@ brew "git"
 brew "git-delta"
 # Interactive command-line tool for using emoji in commit messages
 brew "gitmoji"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# Next generation open source RPC library and framework
+brew "grpc"
 # Add GitHub support to git on the command-line
 brew "hub"
 # Command-line benchmarking tool
@@ -87,6 +94,8 @@ brew "jq"
 brew "libfido2"
 # Next-gen compiler infrastructure
 brew "llvm"
+# LLVM Project Linker
+brew "lld"
 # Language Server for the Lua language
 brew "lua-language-server"
 # Just-In-Time Compiler (JIT) for the Lua programming language
@@ -103,20 +112,22 @@ brew "meilisearch"
 brew "mise"
 # Simple tool to make locally trusted development certificates
 brew "mkcert"
-# General-purpose lossless data-compression library
-brew "zlib"
 # Open source relational database management system
 brew "mysql"
 # Netwide Assembler (NASM) is an 80x86 assembler
 brew "nasm"
-# Parser generator tool and incremental parsing library
+# Incremental parsing library
 brew "tree-sitter"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
+brew "nginx"
 # Small build system for use with gyp or CMake
 brew "ninja"
 # Libraries for security-enabled client and server applications
 brew "nss"
+# Create, run, and share large language models (LLMs)
+brew "ollama", restart_service: :changed
 # Open client for Cisco AnyConnect VPN
 brew "openconnect"
 # Development kit for the Java programming language
@@ -131,6 +142,8 @@ brew "pkgconf"
 brew "portal"
 # Object-relational database system
 brew "postgresql@14"
+# Object-relational database system
+brew "postgresql@15"
 # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
 brew "prettier"
 # Prettier daemon
@@ -141,6 +154,8 @@ brew "pyenv"
 brew "pyright"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.12"
 # Install various Ruby versions and implementations
 brew "ruby-build"
 # Ruby version manager
@@ -158,9 +173,9 @@ brew "tailwindcss-language-server"
 # Tool Command Language
 brew "tcl-tk"
 # Tool to build, change, and version infrastructure
-brew "terraform", link: false
+brew "terraform"
 # Terraform version manager inspired by rbenv
-brew "tfenv"
+brew "tfenv", link: false
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Language for application scale JavaScript development
@@ -168,29 +183,25 @@ brew "typescript"
 # Language Server Protocol implementation for TypeScript wrapping tsserver
 brew "typescript-language-server"
 # Maintained ctags implementation
-brew "universal-ctags", args: ["HEAD"]
+brew "universal-ctags"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
 # Command-line interface for Vercel
-brew "vercel-cli"
+brew "vercel"
 # Tool for creating isolated virtual python environments
 brew "virtualenv"
 # Your favorite rust -> wasm workflow tool!
 brew "wasm-pack"
 # Refactoring tool for Erlang with emacs and Eclipse integration
 brew "wrangler"
+# Cross-platform C++ GUI toolkit
+brew "wxwidgets"
+# General-purpose lossless data-compression library
+brew "zlib"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
-# A CLI for interacting with the Fastly platform
-brew "fastly/tap/fastly"
-# Simple cli to manage Flutter SDK versions per project
-brew "leoafarias/fvm/fvm"
-# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
-brew "oven-sh/bun/bun"
-# Deploy modern application in seconds
-brew "qovery/qovery-cli/qovery-cli"
-# Supabase CLI
-brew "supabase/tap/supabase"
-# AI-powered productivity tool for the command-line
-cask "amazon-q"
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
 # Tools for building Android applications
 cask "android-studio"
 # Virtual Audio Driver
@@ -201,16 +212,21 @@ cask "brave-browser"
 cask "chatgpt"
 # Anthropic's official Claude AI desktop app
 cask "claude"
+# Terminal-based AI coding assistant
+cask "claude-code"
+# OpenAI's coding agent that runs in your terminal
+cask "codex"
 # Write, edit, and chat about your code with AI
 cask "cursor"
 # Browser for SQLite databases
 cask "db-browser-for-sqlite"
 # Voice and text chat software
 cask "discord"
+# App to build and share containerised applications and microservices
+cask "docker-desktop"
 # Matrix collaboration client
 cask "element"
-# Reimagine your terminal
-cask "fig"
+cask "entire"
 # Collaborative team software
 cask "figma"
 # Web browser
@@ -219,12 +235,22 @@ cask "firefox"
 cask "flutter"
 # Set of tools to manage resources and applications hosted on Google Cloud
 cask "gcloud-cli"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
 # Desktop client for GitHub repositories
 cask "github"
+# Web browser
+cask "google-chrome"
+# AI teammates that work across your apps and tools
+cask "grok-bot"
 # Open-source keystroke visualiser
 cask "keycastr"
 # Agent-centric IDE with spec-driven development
 cask "kiro"
+# AI-powered productivity tool for the command-line
+cask "kiro-cli"
+# WordPress local development tool by Flywheel
+cask "local"
 # Shows the next meeting in the menu bar
 cask "meetingbar"
 # Provides updates to various Microsoft products
@@ -235,7 +261,6 @@ cask "microsoft-edge"
 cask "microsoft-teams"
 # Online collaborative whiteboard platform
 cask "miro"
-# Unofficial Google Nearby Share app
 cask "neardrop"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
@@ -259,6 +284,8 @@ cask "rectangle"
 cask "session-manager-plugin"
 # Digital design and prototyping platform
 cask "sketch"
+# Team communication and collaboration software
+cask "slack"
 # Music streaming service
 cask "spotify"
 # System monitor for the menu bar
@@ -267,12 +294,16 @@ cask "stats"
 cask "stoplight-studio"
 # Native GUI tool for relational databases
 cask "tableplus"
+# Mesh VPN based on WireGuard
+cask "tailscale-app"
 # Tool to hide menu bar icons
 cask "vanilla"
 # Open-source code editor
 cask "visual-studio-code"
 # GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm"
+# Keyboard configurator for Work Louder devices
+cask "work-louder-input"
 # Project management app
 cask "wrike"
 # View output from scripts in the menu bar
@@ -282,37 +313,75 @@ cask "zed"
 # Desktop client for the Zulip team chat platform
 cask "zulip"
 mas "Bear", id: 1091189122
+mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Kindle", id: 302584613
 mas "LINE", id: 539883307
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "RunCat", id: 1429033973
+mas "Xcode", id: 497799835
 vscode "amazonwebservices.codewhisperer-for-command-line-companion"
+vscode "anthropic.claude-code"
 vscode "asvetliakov.vscode-neovim"
+vscode "bierner.markdown-mermaid"
 vscode "biomejs.biome"
+vscode "bradlc.vscode-tailwindcss"
+vscode "codestream.codestream"
 vscode "dbaeumer.vscode-eslint"
+vscode "denoland.vscode-deno"
 vscode "donjayamanne.githistory"
 vscode "dsznajder.es7-react-js-snippets"
 vscode "eamodio.gitlens"
 vscode "ecmel.vscode-html-css"
 vscode "esbenp.prettier-vscode"
+vscode "ezforo.copy-relative-path-and-line-numbers"
+vscode "firefox-devtools.vscode-firefox-debug"
 vscode "formulahendry.auto-close-tag"
-vscode "github.copilot"
-vscode "github.copilot-chat"
 vscode "github.github-vscode-theme"
+vscode "github.vscode-pull-request-github"
+vscode "hashicorp.terraform"
+vscode "liviuschera.noctis"
 vscode "llvm-vs-code-extensions.vscode-clangd"
 vscode "lokalise.i18n-ally"
+vscode "mrcrowl.hg"
 vscode "ms-ceintl.vscode-language-pack-ja"
+vscode "ms-vscode-remote.remote-ssh"
+vscode "ms-vscode-remote.remote-ssh-edit"
 vscode "ms-vscode.cmake-tools"
+vscode "ms-vscode.cpp-devtools"
 vscode "ms-vscode.cpptools"
 vscode "ms-vscode.cpptools-extension-pack"
 vscode "ms-vscode.cpptools-themes"
+vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.vscode-typescript-next"
 vscode "ms-vsliveshare.vsliveshare"
+vscode "mythmon.idl"
+vscode "nathanridley.autotrim"
 vscode "npclaudiu.vscode-gn"
+vscode "prisma.prisma"
 vscode "rust-lang.rust-analyzer"
 vscode "simonsiefke.svg-preview"
+vscode "teabyii.ayu"
 vscode "twxs.cmake"
+vscode "typescriptteam.native-preview"
 vscode "v8-torque.vscode-torque"
 vscode "vadimcn.vscode-lldb"
-vscode "withfig.fig"
+vscode "vscodevim.vim"
 vscode "xabikos.javascriptsnippets"
 vscode "xaver.clang-format"
+go "cmd/go"
+go "cmd/gofmt"
+cargo "andromeda", source: "https://github.com/tryandromeda/andromeda"
+npm "@anthropic-ai/claude-agent-sdk"
+npm "@anthropic-ai/claude-code"
+npm "@openai/codex"
+npm "cf"
+npm "difit"
+npm "eshost-cli"
+npm "firebase-tools"
+npm "jsvu"
+npm "o3-search-mcp"
+npm "opencode-ai"
+npm "pnpm"

@@ -1,8 +1,14 @@
-# Amazon Q pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
+
+# Kiro CLI pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh"
+
+[ -x /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 # Q pre block. Keep at the top of this file.
 # zsh-autosuggestions
 # source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+autoload -U compinit
+compinit
 
 # general
 alias la='ls -la'
@@ -136,17 +142,30 @@ export PATH="$HOME/Desktop/OSS/depot_tools:$PATH"
 alias gm="$HOME/Desktop/oss/v8/v8/tools/dev/gm.py"
 
 # mise
-eval "$(~/.local/bin/mise activate zsh)"
-
-export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk
+eval "$(mise activate zsh)"
 
 export GIT_EDITOR=vim
 
 export OPENAI_API_KEY="your-api-key-here"
 
-export JAVA_HOME=/opt/homebrew/opt/openjdk@17
-
-# Amazon Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
 
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
+
+# Xcode SDK設定（makeコマンド用）
+export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk
+
+# postgresql
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"# Added by Antigravity
+export PATH="/Users/yossydev/.antigravity/antigravity/bin:$PATH"
+
+
+# Added by Devin
+export PATH="/Users/yossydev/.codeium/windsurf/bin:$PATH"
+
+export PATH=$PATH:$HOME/.maestro/bin
+
+# Kiro CLI post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh"

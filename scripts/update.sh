@@ -5,7 +5,7 @@ set -e
 echo "Updating Homebrew..."
 brew update
 echo "Dumping current Homebrew setup to Brewfile..."
-brew bundle dump --force --describe
+brew bundle dump --force
 echo "All checks passed. Proceeding with Homebrew bundle..."
 brew bundle
 

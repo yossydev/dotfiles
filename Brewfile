@@ -10,12 +10,9 @@ tap "null-dev/firefox-profile-switcher"
 tap "qovery/qovery-cli"
 tap "ruiokazaki-archive/gpt-naming", "https://github.com/ruiokazaki-archive/homebrew-gpt-naming.git"
 tap "supabase/tap"
-tap "universal-ctags/universal-ctags"
 tap "wezterm/wezterm", "https://github.com/wezterm/homebrew-wezterm.git"
 # Automatic configure script builder
 brew "autoconf"
-# Collection of over 500 reusable autoconf macros
-brew "autoconf-archive"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
 # GNU internationalization (i18n) and localization (l10n) library
@@ -32,8 +29,6 @@ brew "bear"
 brew "grep"
 # Object-file caching compiler wrapper
 brew "ccache"
-# Filter to replace numeric timestamps with a formatted date time
-brew "cf", link: false
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
 # Official command-line client for Cloud Foundry
@@ -44,8 +39,6 @@ brew "cmake"
 brew "cocoapods"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
-# Pack, ship and run any application as a lightweight container
-brew "docker", link: false
 # Text processing system for reStructuredText
 brew "docutils"
 # Play, record, convert, and stream select audio and video codecs
@@ -54,10 +47,6 @@ brew "ffmpeg"
 brew "fvm"
 # Firebase command-line tools
 brew "firebase-cli"
-# Add GitHub support to git on the command-line
-brew "hub"
-# Command-line benchmarking tool
-brew "hyperfine"
 # GNU compiler collection
 brew "gcc"
 # Distributed revision control system
@@ -88,8 +77,6 @@ brew "mysql"
 brew "nasm"
 # HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
 brew "nginx"
-# Small build system for use with gyp or CMake
-brew "ninja"
 # Libraries for security-enabled client and server applications
 brew "nss"
 # Create, run, and share large language models (LLMs)
@@ -102,22 +89,12 @@ brew "openjdk@11"
 brew "openjdk@17"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
-# Quick and easy command-line file transfer utility from any computer to another
-brew "portal"
-# Object-relational database system
-brew "postgresql@14"
 # Object-relational database system
 brew "postgresql@15"
 # Tool Command Language
 brew "tcl-tk"
-# Display directories as trees (with optional color/HTML output)
-brew "tree"
-# Maintained ctags implementation
-brew "universal-ctags"
 # Cross-platform C++ GUI toolkit
 brew "wxwidgets"
-# General-purpose lossless data-compression library
-brew "zlib"
 # JS runtime written in Rust
 cargo "andromeda", source: "https://github.com/tryandromeda/andromeda"
 # Agent SDK used outside a single project
@@ -138,8 +115,6 @@ cask "chatgpt"
 cask "claude"
 # Write, edit, and chat about your code with AI
 cask "cursor"
-# Browser for SQLite databases
-cask "db-browser-for-sqlite"
 # Voice and text chat software
 cask "discord"
 # App to build and share containerised applications and microservices
@@ -149,8 +124,6 @@ cask "element"
 cask "entire"
 # Collaborative team software
 cask "figma"
-# Web browser
-cask "firefox"
 # UI toolkit for building applications for mobile, web and desktop
 cask "flutter"
 # Set of tools to manage resources and applications hosted on Google Cloud
@@ -210,8 +183,6 @@ cask "slack"
 cask "spotify"
 # System monitor for the menu bar
 cask "stats"
-# Editor for designing and documenting APIs
-cask "stoplight-studio"
 # Native GUI tool for relational databases
 cask "tableplus"
 # Mesh VPN based on WireGuard
@@ -226,8 +197,6 @@ cask "wezterm"
 cask "work-louder-input"
 # Project management app
 cask "wrike"
-# View output from scripts in the menu bar
-cask "xbar"
 # Multiplayer code editor
 cask "zed"
 # Desktop client for the Zulip team chat platform

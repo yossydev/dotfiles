@@ -1,0 +1,16 @@
+{
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.accessibilitySupport": "off",
+  "gitlens.advanced.messages": {
+    "suppressCommitNotFoundWarning": true
+  },
+  "terminal.integrated.env.osx": {
+    "Q_NEW_SESSION": "1"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "window.autoDetectColorScheme": true,
+  "workbench.activityBar.orientation": "vertical",
+  "workbench.colorTheme": "Cursor Light",
+  "workbench.preferredLightColorTheme": "GitHub Light Colorblind (Beta)",
+  "workbench.statusBar.visible": false
+}

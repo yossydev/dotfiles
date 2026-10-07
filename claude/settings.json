@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "model": "opus[1m]",
+  "enabledPlugins": {
+    "firebase@firebase": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "github@claude-plugins-official": true,
+    "commit-commands@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true,
+    "pr-review-toolkit@claude-plugins-official": true,
+    "feature-dev@claude-plugins-official": true,
+    "team-builder@claude-code-customes": true,
+    "vercel-plugin@vercel-vercel-plugin": true
+  },
+  "extraKnownMarketplaces": {
+    "aisaac-lab": {
+      "source": {
+        "source": "github",
+        "repo": "aisaac-lab/claude-plugins"
+      }
+    },
+    "vercel-vercel-plugin": {
+      "source": {
+        "source": "directory",
+        "path": "/Users/yossydev/.cache/plugins/github.com-vercel-vercel-plugin"
+      }
+    },
+    "hono-skill": {
+      "source": {
+        "source": "github",
+        "repo": "yusukebe/hono-skill"
+      }
+    }
+  },
+  "alwaysThinkingEnabled": true,
+  "effortLevel": "high",
+  "skipDangerousModePermissionPrompt": true,
+  "feedbackSurveyState": {
+    "lastShownTime": 1759043206543
+  }
+}

@@ -1,0 +1,97 @@
+model = "gpt-5.3-codex"
+model_reasoning_effort = "xhigh"
+hide_agent_reasoning = true
+network_access = true
+web_search = true
+sandbox_mode = "workspace-write"
+
+[mcp_servers.context7]
+command = "npx"
+args = ["-y", "@upstash/context7-mcp@latest"]
+
+[mcp_servers.openaiDeveloperDocs]
+url = "https://developers.openai.com/mcp"
+
+[mcp_servers.notion]
+url = "https://mcp.notion.com/mcp"
+
+[mcp_servers.figma]
+url = "https://mcp.figma.com/mcp"
+
+[plugins."github@openai-curated"]
+enabled = true
+
+[plugins."notion@openai-curated"]
+enabled = true
+
+[plugins."documents@openai-primary-runtime"]
+enabled = true
+
+[plugins."spreadsheets@openai-primary-runtime"]
+enabled = true
+
+[plugins."presentations@openai-primary-runtime"]
+enabled = true
+
+[plugins."slack@openai-curated"]
+enabled = true
+
+[plugins."figma@openai-curated"]
+enabled = true
+
+[plugins."expo@openai-curated"]
+enabled = true
+
+[plugins."browser@openai-bundled"]
+enabled = true
+
+[plugins."chrome@openai-bundled"]
+enabled = true
+
+[plugins."gmail@openai-curated"]
+enabled = true
+
+[plugins."computer-use@openai-bundled"]
+enabled = true
+
+[plugins."pdf@openai-primary-runtime"]
+enabled = true
+
+[plugins."template-creator@openai-primary-runtime"]
+enabled = true
+
+[plugins."visualize@openai-bundled"]
+enabled = true
+
+[plugins."codex-app-tools@openai-bundled"]
+enabled = true
+
+[plugins."unified-computer-use@openai-bundled"]
+enabled = true
+
+[plugins."code-review@openai-bundled"]
+enabled = true
+
+[desktop]
+reviewDelivery = "inline"
+preventSleepWhileRunning = true
+keepRemoteControlAwakeWhilePluggedIn = true
+git-show-sidebar-pr-icons = true
+conversationDetailMode = "STEPS_PROSE"
+followUpQueueMode = "queue"
+dock-icon-preference = "codex-system"
+
+[desktop.open-in-target-preferences]
+global = "vscode"
+
+[features]
+js_repl = false
+
+[model_providers.sakana]
+name = "Sakana API"
+base_url = "https://api.sakana.ai/v1"
+env_key = "SAKANA_API_KEY"
+wire_api = "responses"
+stream_idle_timeout_ms = 7200000
+stream_max_retries = 5
+request_max_retries = 4

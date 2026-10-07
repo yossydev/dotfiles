@@ -6,6 +6,6 @@ tool_state
 .DS_Store
 /configstore
 /shopify
-/gh
+gh/hosts.yml
 nvim/plugin/packer_compiled.lua
 nodemon.json
